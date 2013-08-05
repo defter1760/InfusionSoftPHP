@@ -24,51 +24,73 @@ $key = "5b67531ca26e2b85911527484e60b3ca";
 ###########################################
 ###Our Function to add people to a group###
 ###########################################
-function addGrp($CID, $GID) {
-###Set up global variables###
-	global $client, $key;
-###Set up the call to add to the group###
-	$call = new xmlrpcmsg("ContactService.addToGroup", array(
-		php_xmlrpc_encode($key), 		#The encrypted API key
-		php_xmlrpc_encode($CID),		#The contact ID
-		php_xmlrpc_encode($GID),		#The Group ID
-	));
-###Send the call###
-	$result = $client->send($call);
 
-	if(!$result->faultCode()) {
-		print "Contact added to group " . $GID;
-		print "<BR>";
-	} else {
-		print $result->faultCode() . "<BR>";
-		print $result->faultString() . "<BR>";
+
+function optIn($reason, $email)
+	{
+		global $client, $key;
+		$call = new xmlrpcmsg("APIEmailService.optIn", array(
+			php_xmlrpc_encode($key), 		#The encrypted API key
+			php_xmlrpc_encode($email),		#The contact ID
+			php_xmlrpc_encode($reason),		#The Group ID
+		));
+		$result = $client->send($call);
+		if(!$result->faultCode()) {
+			print "Email Opted in " . $GID;
+			print "<BR>";
+		} else {
+			print $result->faultCode() . "<BR>";
+			print $result->faultString() . "<BR>";
+		}
 	}
-}
+
+function addGrp($CID, $GID)
+	{
+	###Set up global variables###
+		global $client, $key;
+	###Set up the call to add to the group###
+		$call = new xmlrpcmsg("ContactService.addToGroup", array(
+			php_xmlrpc_encode($key), 		#The encrypted API key
+			php_xmlrpc_encode($CID),		#The contact ID
+			php_xmlrpc_encode($GID),		#The Group ID
+		));
+	###Send the call###
+		$result = $client->send($call);
+	
+		if(!$result->faultCode()) {
+			print "Contact added to group " . $GID;
+			print "<BR>";
+		} else {
+			print $result->faultCode() . "<BR>";
+			print $result->faultString() . "<BR>";
+		}
+	}
 
 ##############################################
 ###Our Function to add people to a campaign###
 ##############################################
-function addCamp($CID, $CMP) {
-###Set up global variables###
-	global $client, $key;
+function addCamp($CID, $CMP)
+	{
+	###Set up global variables###
+		global $client, $key;
+		
+	###Set up the call to add to the campaign###
+		$call = new xmlrpcmsg("ContactService.addToCampaign", array(
+			php_xmlrpc_encode($key), 		#The encrypted API key
+			php_xmlrpc_encode($CID),		#The contact ID
+			php_xmlrpc_encode($CMP),		#The Campaign ID
+		));
+	###Send the call###
+		$result = $client->send($call);
 	
-###Set up the call to add to the campaign###
-	$call = new xmlrpcmsg("ContactService.addToCampaign", array(
-		php_xmlrpc_encode($key), 		#The encrypted API key
-		php_xmlrpc_encode($CID),		#The contact ID
-		php_xmlrpc_encode($CMP),		#The Campaign ID
-	));
-###Send the call###
-	$result = $client->send($call);
-
-	if(!$result->faultCode()) {
-		print "Contact added to Campaign " . $CMP;
-		print "<BR>";
-	} else {
-		print $result->faultCode() . "<BR>";
-		print $result->faultString() . "<BR>";
+		if(!$result->faultCode()) {
+			print "Contact added to Campaign " . $CMP;
+			print "<BR>";
+		} else {
+			print $result->faultCode() . "<BR>";
+			print $result->faultString() . "<BR>";
+		}
 	}
-}
 
 ################################################################
 ###We only want to run the API script if there is posted data###
@@ -84,7 +106,14 @@ $contact = array(
 		"FirstName" => 	$_POST['fName'],
 		"LastName" => 	$_POST['lName'],
 		"Email" => 		$_POST['email'],
+			"StreetAddress1" => 		$_POST['StreetAddress1'],
+			"StreetAddress2" => 		$_POST['StreetAddress2'],
+			"City" => 		$_POST['City'],
+			"State" => 		$_POST['State'],
+			"PostalCode" => 		$_POST['PostalCode'],
+			"Country" => 		$_POST['Country'],
 	);
+
 
 ###Set up the call###
 $call = new xmlrpcmsg("ContactService.add", array(
@@ -92,9 +121,13 @@ $call = new xmlrpcmsg("ContactService.add", array(
 		php_xmlrpc_encode($contact)		#The contact array
 	));
 
+
 ###Send the call###
 	$result = $client->send($call);
+	
 
+
+	
 ###Check the returned value to see if it was successful and set it to a variable/display the results###
 	if(!$result->faultCode()) {
                 $conID = $result->value();
@@ -125,4 +158,7 @@ $call = new xmlrpcmsg("ContactService.add", array(
 } else {
 echo "<script>alert('Be sure to fill out all required fields.');</script>"; 
 }
+$email = $_POST['email'];
+$reason = $_POST['fName']." ".$_POST['lName'];
+optIn($reason, $email)
 ?>
