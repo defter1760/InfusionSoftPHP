@@ -1,6 +1,8 @@
 <head>
 <title></title>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
 <style>
+
 select, input[type="text"], textarea {   
     padding: 9px;  
     border: solid 1px #E5E5E5;  
@@ -65,6 +67,9 @@ h1 {
     font-size: 26px;  
     color: #FFFFFF;  
     }
-
+body {
+  font-family: 'Open Sans', serif;
+    font-size: 10%; 
+}
 </style>
 </head>
