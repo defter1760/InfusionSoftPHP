@@ -40,7 +40,7 @@ require('posttovars.php');
 	    Unique ID
 	</td>
 	<td >
-	    <input type="text" name="ID" disabled
+	    <input type="text" name="ID"
 		<?PHP
 		    if(!isset($conID))
 		    {
