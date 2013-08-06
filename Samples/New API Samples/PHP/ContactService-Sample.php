@@ -141,11 +141,11 @@ $call = new xmlrpcmsg("ContactService.add", array(
 ##########################################################
 ###Check to see what newsgroups/campaigns were selected###
 ##########################################################
-	if(isset($_POST['news1'])) {
-		addGrp($conID,91);
+	if(isset($_POST['215'])) {
+		addGrp($conID,215);
 	}
-	if(isset($_POST['news2'])) {
-		addGrp($conID,92);
+	if(isset($_POST['161'])) {
+		addGrp($conID,161);
 	}
 	if(isset($_POST['camp1'])) {
 		addCamp($conID,21);
@@ -155,10 +155,11 @@ $call = new xmlrpcmsg("ContactService.add", array(
 	}
 }
 ###Finally, lets alert them if they didnt post the required fields###
-} else {
-echo "<script>alert('Be sure to fill out all required fields.');</script>"; 
-}
 $email = $_POST['email'];
 $reason = $_POST['fName']." ".$_POST['lName'];
 optIn($reason, $email)
+} else {
+## echo "<script>alert('Be sure to fill out all required fields.');</script>"; 
+}
+
 ?>

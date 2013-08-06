@@ -1,10 +1,11 @@
 <html>
 <?PHP
 require('head.php');
+require('ContactService-Sample.php');
 ?>
 <body>
 
-<form action="ContactService-Sample.php" method="POST" class="form">
+<form action="forms.php" method="POST" class="form">
 
 
 <table style="border:1px solid black;">
