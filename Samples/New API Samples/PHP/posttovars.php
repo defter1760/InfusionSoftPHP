@@ -32,4 +32,39 @@ if (empty($PostalCode)) unset($PostalCode);
 
 if (isset($_POST['Country'])) $Country = $_POST['Country'];
 if (empty($Country)) unset($Country);
+
+if (isset($_POST['specialInfo'])) $specialInfo = $_POST['specialInfo'];
+if (empty($specialInfo)) unset($specialInfo);
+
+if (isset($_POST['lifePurpose'])) $lifePurpose = $_POST['lifePurpose'];
+if (empty($lifePurpose)) unset($lifePurpose);
+
+if (isset($_POST['lifeLesson'])) $lifeLesson = $_POST['lifeLesson'];
+if (empty($lifeLesson)) unset($lifeLesson);
+
+if (isset($_POST['lifeSchoolWisdom'])) $lifeSchoolWisdom = $_POST['lifeSchoolWisdom'];
+if (empty($lifeSchoolWisdom)) unset($lifeSchoolWisdom);
+
+if (isset($_POST['lifeSchoolLove'])) $lifeSchoolLove = $_POST['lifeSchoolLove'];
+if (empty($lifeSchoolLove)) unset($lifeSchoolLove);
+
+if (isset($_POST['lifeSchoolService'])) $lifeSchoolService = $_POST['lifeSchoolService'];
+if (empty($lifeSchoolService)) unset($lifeSchoolService);
+
+if (isset($_POST['lifeSchoolPeace'])) $lifeSchoolPeace = $_POST['lifeSchoolPeace'];
+if (empty($lifeSchoolPeace)) unset($lifeSchoolPeace);
+
+if (isset($_POST['importantToClient'])) $importantToClient = $_POST['importantToClient'];
+if (empty($importantToClient)) unset($importantToClient);
+
+if (isset($_POST['ahaMoment'])) $ahaMoment = $_POST['ahaMoment'];
+if (empty($ahaMoment)) unset($ahaMoment);
+
+if (isset($_POST['recordingMade'])) $recordingMade = $_POST['recordingMade'];
+if (empty($recordingMade)) unset($recordingMade);
+
+if (isset($_POST['$skypeName'])) $skypeName = $_POST['$skypeName'];
+if (empty($skypeName)) unset($skypeName);
+
+
 ?>

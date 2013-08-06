@@ -158,8 +158,8 @@ $call = new xmlrpcmsg("ContactService.add", array(
 	if(isset($_POST['225'])) {
 		addGrp($conID,225);
 	}
-	if(isset($_POST['camp2'])) {
-		addCamp($conID,23);
+	if(isset($_POST['223'])) {
+		addGrp($conID,223);
 	}
 }
 ###Finally, lets alert them if they didnt post the required fields###

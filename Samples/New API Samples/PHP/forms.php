@@ -288,6 +288,132 @@ require('posttovars.php');
 <table>
     <tr>
 	<td>
+	    
+	</td>
+    </tr>
+    <tr>
+    	<td>
+	    Special Information about client:
+	</td>
+	<td>
+	    <textarea rows="0" cols="70" name="specialInfo"><?PHP if(isset($specialInfo))
+		    {
+			echo $specialInfo;
+		    }
+		?></textarea>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    
+	</td>
+    </tr>
+    <tr>
+    	<td>
+	    Life Purpose:
+	</td>
+	<td>
+	    <textarea rows="0" cols="70" name="lifePurpose"><?PHP if(isset($lifePurpose))
+		    {
+			echo $lifePurpose;
+		    }
+		?></textarea>
+	</td>
+    </tr>
+    <tr>
+    	<td>
+	    Life School:
+	</td>
+    	<td>
+	    <table>
+		<tr>
+		    <td align=left>
+			<input type="checkbox" name="wisdom" /> Wisdom
+		    </td>
+		    <td align=left>
+			<input type=checkbox name="love" /> Love
+		    </td>
+		    <td align=left>
+			<input type=checkbox name="service" /> Service
+		    </td>
+		    <td align=left>
+			<input type=checkbox name="peace" /> Peace
+		    </td>
+		</tr>
+	    </table>
+	</td>	
+    </tr>
+    <tr>
+    	<td>
+	    Life Lesson:
+	</td>
+	<td>
+	    <textarea rows="0" cols="70" name="lifeLesson"><?PHP if(isset($lifeLesson))
+		    {
+			echo $lifeLesson;
+		    }
+		?></textarea>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    
+	</td>
+    </tr>
+    <tr>
+    	<td>
+	    What is important to the client:
+	</td>
+	<td>
+	    <textarea rows="0" cols="70" name="lifeLesson"><?PHP if(isset($importantToClient))
+		    {
+			echo $importantToClient;
+		    }
+		?></textarea>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    
+	</td>
+    </tr>
+    <tr>
+    	<td>
+	    What was their "AHA" moment?
+	</td>
+	<td>
+	    <textarea rows="0" cols="70" name="lifeLesson"><?PHP if(isset($ahaMoment))
+		    {
+			echo $ahaMoment;
+		    }
+		?></textarea>
+	</td>
+    </tr>    
+        <tr>
+    	<td>
+	    Recording Made?
+	</td>
+    	<td>
+	    <table>
+		<tr>
+		    <td align=left>
+			<input type="checkbox" name="recordingbyus" /> By us
+		    </td>
+		    <td align=left>
+			<input type=checkbox name="recordingbyclient" /> By Client
+		    </td>
+		    <td align=left>
+			<input type=checkbox name="norecording" /> No recording
+		    </td>
+		</tr>
+	    </table>
+	</td>	
+    </tr>
+</table>
+
+<table>
+    <tr>
+	<td>
 	    Next step for Client:
 	</td>
     </tr>
@@ -324,7 +450,7 @@ require('posttovars.php');
 <tr><td><input type="checkbox" name="161" /> FHA with Paypal Sent</td><td><input type=checkbox name="news2" /> Fingerprint with Paypal sent</td></tr>
 <tr><td><input type="checkbox" name="165" /> FHA without Paypal Sent</td><td><input type=checkbox name="news2" /> Fingerprint without Paypal sent</td></tr>
 <tr><td><input type="checkbox" name="197" /> No response to Comp Session:Coaching</td><td><input type=checkbox name="225" /> No response to Comp Session:Other</td></tr>
-
+<tr><td><input type="checkbox" name="223" /> Long Term Followup</td></tr>
 
 
 <tr><td><input type="submit" value="Submit" class="submit"/></td></tr>
