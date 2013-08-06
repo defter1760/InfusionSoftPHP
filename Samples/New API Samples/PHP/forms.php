@@ -1,7 +1,7 @@
 <html>
 <?PHP
 require('head.php');
-require('ContactService-Sample.php');
+
 ?>
 <body>
 
@@ -13,11 +13,29 @@ require('ContactService-Sample.php');
     <tr><td>
 <h1>Nadia Tumas -> Infusionsoft API</h1>
 <table>
-    <tr><td>Unique ID</td><td ><input type="text" name="ID" disabled/></td></tr>
+    <tr>
+	<td>
+    <?PHP
+	require('ContactService-Sample.php');
+    ?>
+	</td>
+    </tr>
+    <tr>
+	<td>
+    <?PHP
+	if (isset($_POST['fName']))
+	{
+	    echo '<input type="reset" value="Reset!">';
+	}
+    ?>
+	</td>
+    </tr>    
+
+    <tr><td>Unique ID</td><td ><input type="text" name="ID" disabled <?PHP if (isset($ID)){echo 'value='.$ID;} ?> /></td></tr>
 <tr><td>First Name</td><td><input type="text" name="fName" /></td></tr>
 <tr><td>Last Name</td><td><input type="text" name="lName" /></td></tr>
 <tr><td>Email</td><td><input type="text" name="email" /></td></tr>
-<tr><td>Phone</td><td><input type="text" name="email" /></td></tr>
+<tr><td>Phone</td><td><input type="text" name="phone" /></td></tr>
 <tr><td>StreetAddress1</td><td><input type="text" name="StreetAddress1" /></td></tr>
 <tr><td>StreetAddress2</td><td><input type="text" name="StreetAddress2" /></td></tr>
 <tr><td>City</td><td><input type="text" name="City" /></td></tr>

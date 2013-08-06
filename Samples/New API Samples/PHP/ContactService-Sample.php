@@ -106,6 +106,7 @@ $contact = array(
 		"FirstName" => 	$_POST['fName'],
 		"LastName" => 	$_POST['lName'],
 		"Email" => 		$_POST['email'],
+		"Phone1" => 		$_POST['phone'],
 			"StreetAddress1" => 		$_POST['StreetAddress1'],
 			"StreetAddress2" => 		$_POST['StreetAddress2'],
 			"City" => 		$_POST['City'],
@@ -157,7 +158,7 @@ $call = new xmlrpcmsg("ContactService.add", array(
 ###Finally, lets alert them if they didnt post the required fields###
 $email = $_POST['email'];
 $reason = $_POST['fName']." ".$_POST['lName'];
-optIn($reason, $email)
+optIn($reason, $email);
 } else {
 ## echo "<script>alert('Be sure to fill out all required fields.');</script>"; 
 }
