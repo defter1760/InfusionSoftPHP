@@ -57,7 +57,14 @@ input[type="submit"] {
     -webkit-border-radius: 5px;  
     }
 
-
+h1 {  
+    width: auto;  
+    padding: 15px 15px;  
+    background: #617798;  
+    border: 0;  
+    font-size: 26px;  
+    color: #FFFFFF;  
+    }
 
 </style>
 </head>

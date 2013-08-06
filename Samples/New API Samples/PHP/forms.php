@@ -5,11 +5,12 @@ require('head.php');
 <body>
 
 <form action="ContactService-Sample.php" method="POST" class="form">
-<h1>Nadia Tumas -> Infusionsoft API</h1>
 
-<p></p>
-<table border=2>
+
+<table style="border:1px solid black;">
+
     <tr><td>
+<h1>Nadia Tumas -> Infusionsoft API</h1>
 <table>
     <tr><td>Unique ID</td><td ><input type="text" name="ID" disabled/></td></tr>
 <tr><td>First Name</td><td><input type="text" name="fName" /></td></tr>
