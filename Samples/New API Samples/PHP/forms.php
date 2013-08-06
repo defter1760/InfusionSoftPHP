@@ -1,7 +1,7 @@
 <html>
-<?php
+<?PHP
 require('head.php');
-   ?>
+?>
 <body>
 
 <form action="ContactService-Sample.php" method="POST" class="form">
