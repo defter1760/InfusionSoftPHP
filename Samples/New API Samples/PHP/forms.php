@@ -119,6 +119,21 @@ require('posttovars.php');
     </tr>
     <tr>
 	<td>
+	    Phone2
+	</td>
+	<td>
+	    <input type="text" name="phone2" 
+		<?PHP
+		    if(isset($phone2))
+		    {
+			echo 'value="'.$phone2.'"';
+		    }
+		?>	   	   
+	    />
+	</td>
+    </tr>    
+    <tr>
+	<td>
 	    StreetAddress1
 	</td>
 	<td>
@@ -174,7 +189,8 @@ require('posttovars.php');
 		    {
 			echo '<option value="'.$State.'" selected="selected">'.$State.'</option>';
 		    }
-		?>	    
+		?>
+		<option value=""> </option>
 		<option value="AL">Alabama</option>
 		<option value="AK">Alaska</option>
 		<option value="AZ">Arizona</option>
@@ -307,7 +323,7 @@ require('posttovars.php');
 <tr><td><input type="checkbox" name="139" /> Thank you card - Sent</td></tr>
 <tr><td><input type="checkbox" name="161" /> FHA with Paypal Sent</td><td><input type=checkbox name="news2" /> Fingerprint with Paypal sent</td></tr>
 <tr><td><input type="checkbox" name="165" /> FHA without Paypal Sent</td><td><input type=checkbox name="news2" /> Fingerprint without Paypal sent</td></tr>
-
+<tr><td><input type="checkbox" name="197" /> No response to Comp Session:Coaching</td><td><input type=checkbox name="225" /> No response to Comp Session:Other</td></tr>
 
 
 

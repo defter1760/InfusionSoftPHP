@@ -1,5 +1,5 @@
 <?PHP
-
+## POST Vars for Contact fields and ID
 if (isset($_POST['ID'])) $ID = $_POST['ID'];
 if (empty($ID)) unset($ID);
 

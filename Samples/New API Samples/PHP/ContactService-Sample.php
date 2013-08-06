@@ -36,7 +36,7 @@ function optIn($reason, $email)
 		));
 		$result = $client->send($call);
 		if(!$result->faultCode()) {
-			print "Email Opted in " . $GID;
+			print "Email Opted in ";
 			print "<BR>";
 		} else {
 			print $result->faultCode() . "<BR>";
@@ -107,6 +107,7 @@ $contact = array(
 		"LastName" => 	$_POST['lName'],
 		"Email" => 		$_POST['email'],
 		"Phone1" => 		$_POST['phone'],
+		"Phone2" => 		$_POST['phone2'],
 			"StreetAddress1" => 		$_POST['StreetAddress1'],
 			"StreetAddress2" => 		$_POST['StreetAddress2'],
 			"City" => 		$_POST['City'],
@@ -148,8 +149,14 @@ $call = new xmlrpcmsg("ContactService.add", array(
 	if(isset($_POST['161'])) {
 		addGrp($conID,161);
 	}
-	if(isset($_POST['camp1'])) {
-		addCamp($conID,21);
+	if(isset($_POST['165'])) {
+		addGrp($conID,165);
+	}
+	if(isset($_POST['197'])) {
+		addGrp($conID,197);
+	}
+	if(isset($_POST['225'])) {
+		addGrp($conID,225);
 	}
 	if(isset($_POST['camp2'])) {
 		addCamp($conID,23);
