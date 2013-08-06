@@ -1,11 +1,10 @@
 <html>
 <?PHP
 require('head.php');
-
+require('posttovars.php');
 ?>
 <body>
 
-<form action="forms.php" method="POST" class="form">
 
 
 <table style="border:1px solid black;">
@@ -23,15 +22,33 @@ require('head.php');
     <tr>
 	<td>
     <?PHP
+    
 	if (isset($_POST['fName']))
 	{
-	    echo '<input type="reset" value="Reset!">';
+	    echo '<form action="forms.php" method="POST" class="form">';
+	    echo '<input type="submit" value="Reset!">';
+	    echo '<input type=hidden name=reset value=reset>';
+	    echo '</form>';
 	}
     ?>
 	</td>
     </tr>    
+<form action="forms.php" method="POST" class="form">
 
-    <tr><td>Unique ID</td><td ><input type="text" name="ID" disabled <?PHP if (isset($ID)){echo 'value='.$ID;} ?> /></td></tr>
+    <tr><td>Unique ID</td><td ><input type="text" name="ID" disabled
+    <?PHP
+	if(!isset($conID))
+	{
+	    if(isset($ID))
+	    {
+		echo 'value='.$ID;
+	    }
+	}
+	else
+	{
+	    echo 'value='.$conID;
+	}
+    ?> /></td></tr>
 <tr><td>First Name</td><td><input type="text" name="fName" /></td></tr>
 <tr><td>Last Name</td><td><input type="text" name="lName" /></td></tr>
 <tr><td>Email</td><td><input type="text" name="email" /></td></tr>
