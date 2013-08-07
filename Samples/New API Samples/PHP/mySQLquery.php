@@ -22,12 +22,7 @@ if(isset($ID))
     ##
     #This person is in the system, let's update their information
     ##
-        $query = 'UPDATE clients set fName='.$fName.',lName='.$lName.',email='.$email.',phone='.$phone.',
-                    phone2='.$phone2.',specialInfo='.$specialInfo.',lifePurpose='.$lifePurpose.',
-                    lifeLesson='.$lifeLesson.',lifeSchoolWisdom='.$lifeSchoolWisdom.',
-                    lifeSchoolLove='.$lifeSchoolLove.',lifeSchoolService='.$lifeSchoolService.',
-                    lifeSchoolPeace='.$lifeSchoolPeace.',importantToClient='.$importantToClient.',
-                    ahaMoment='.$ahaMoment.',recordingMade='.$recordingMade.',skypeName='.$skypeName.' where id='.$ID;
+        $query = "UPDATE clients set fName='".$fName."',lName='".$lName."',email='".$email."',phone='".$phone."',phone2='".$phone2."',specialInfo='".$specialInfo."',lifePurpose='".$lifePurpose."',lifeLesson='".$lifeLesson."',lifeSchoolWisdom='".$lifeSchoolWisdom."',lifeSchoolLove='".$lifeSchoolLove."',lifeSchoolService='".$lifeSchoolService."',lifeSchoolPeace='".$lifeSchoolPeace."',importantToClient='".$importantToClient."',ahaMoment='".$ahaMoment."',recordingMade='".$recordingMade."',skypeName='".$skypeName."' where id='".$ID."'";
     $result = mysql_query($query) or die('Query failed: ' . mysql_error());
 
     

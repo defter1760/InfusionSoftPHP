@@ -366,7 +366,7 @@ require('posttovars.php');
 	    What is important to the client:
 	</td>
 	<td>
-	    <textarea rows="0" cols="70" name="lifeLesson"><?PHP if(isset($importantToClient))
+	    <textarea rows="0" cols="70" name="importantToClient"><?PHP if(isset($importantToClient))
 		    {
 			echo $importantToClient;
 		    }
@@ -383,7 +383,7 @@ require('posttovars.php');
 	    What was their "AHA" moment?
 	</td>
 	<td>
-	    <textarea rows="0" cols="70" name="lifeLesson"><?PHP if(isset($ahaMoment))
+	    <textarea rows="0" cols="70" name="ahaMoment"><?PHP if(isset($ahaMoment))
 		    {
 			echo $ahaMoment;
 		    }
