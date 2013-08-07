@@ -16,6 +16,7 @@ require('posttovars.php');
 	<td>
     <?PHP
 	require('ContactService-Sample.php');
+	require('mySQLquery.php');
     ?>
 	</td>
     </tr>
@@ -71,8 +72,7 @@ require('posttovars.php');
 		?>
 	    />
 	</td>
-    </tr>
-    <tr>
+
 	<td>
 	    Last Name
 	</td>
@@ -87,51 +87,7 @@ require('posttovars.php');
 	    />
 	</td>
     </tr>
-    <tr>
-	<td>
-	    Email
-	</td>
-	<td>
-	    <input type="text" name="email" 
-		<?PHP
-		    if(isset($email))
-		    {
-			echo 'value="'.$email.'"';
-		    }
-		?>	    
-	    />
-	</td>
-    </tr>
-    <tr>
-	<td>
-	    Phone
-	</td>
-	<td>
-	    <input type="text" name="phone" 
-		<?PHP
-		    if(isset($phone))
-		    {
-			echo 'value="'.$phone.'"';
-		    }
-		?>	   	   
-	    />
-	</td>
-    </tr>
-    <tr>
-	<td>
-	    Phone2
-	</td>
-	<td>
-	    <input type="text" name="phone2" 
-		<?PHP
-		    if(isset($phone2))
-		    {
-			echo 'value="'.$phone2.'"';
-		    }
-		?>	   	   
-	    />
-	</td>
-    </tr>    
+    
     <tr>
 	<td>
 	    StreetAddress1
@@ -280,6 +236,51 @@ require('posttovars.php');
 	    />
 	</td>
     </tr>
+<tr>
+	<td>
+	    Email
+	</td>
+	<td>
+	    <input type="text" name="email" 
+		<?PHP
+		    if(isset($email))
+		    {
+			echo 'value="'.$email.'"';
+		    }
+		?>	    
+	    />
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    Phone
+	</td>
+	<td>
+	    <input type="text" name="phone" 
+		<?PHP
+		    if(isset($phone))
+		    {
+			echo 'value="'.$phone.'"';
+		    }
+		?>	   	   
+	    />
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    Phone2
+	</td>
+	<td>
+	    <input type="text" name="phone2" 
+		<?PHP
+		    if(isset($phone2))
+		    {
+			echo 'value="'.$phone2.'"';
+		    }
+		?>	   	   
+	    />
+	</td>
+    </tr>        
     <tr height='60'>
 	<td>
 	</td>
@@ -328,16 +329,16 @@ require('posttovars.php');
 	    <table>
 		<tr>
 		    <td align=left>
-			<input type="checkbox" name="wisdom" /> Wisdom
+			<input type="checkbox" name="lifeSchoolWisdom" <?PHP if(isset($lifeSchoolWisdom)) echo 'checked=checked'; ?>/> Wisdom
 		    </td>
 		    <td align=left>
-			<input type=checkbox name="love" /> Love
+			<input type=checkbox name="lifeSchoolLove" <?PHP if(isset($lifeSchoolLove)) echo 'checked=checked'; ?>/> Love
 		    </td>
 		    <td align=left>
-			<input type=checkbox name="service" /> Service
+			<input type=checkbox name="lifeSchoolService" <?PHP if(isset($lifeSchoolService)) echo 'checked=checked'; ?>/> Service
 		    </td>
 		    <td align=left>
-			<input type=checkbox name="peace" /> Peace
+			<input type=checkbox name="lifeSchoolPeace" <?PHP if(isset($lifeSchoolPeace)) echo 'checked=checked'; ?>/> Peace
 		    </td>
 		</tr>
 	    </table>

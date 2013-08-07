@@ -15,6 +15,9 @@ if (empty($email)) unset($email);
 if (isset($_POST['phone'])) $phone = $_POST['phone'];
 if (empty($phone)) unset($phone);
 
+if (isset($_POST['phone2'])) $phone2 = $_POST['phone2'];
+if (empty($phone2)) unset($phone2);
+
 if (isset($_POST['StreetAddress1'])) $StreetAddress1 = $_POST['StreetAddress1'];
 if (empty($StreetAddress1)) unset($StreetAddress1);
 

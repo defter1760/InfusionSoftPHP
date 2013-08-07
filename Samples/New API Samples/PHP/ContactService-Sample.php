@@ -7,7 +7,7 @@ $client->setSSLVerifyPeer(FALSE);
 $key = "5b67531ca26e2b85911527484e60b3ca";
 
 require('functions.php');
-if(!isset($_POST['ID']))
+if(!isset($ID))
 {#wrap everything with a condition::Only ADD if there was not an ID posted##END
 	################################################################
 	###We only want to run the API script if there is posted data###
