@@ -78,6 +78,36 @@ if(!isset($ID))
 		if(isset($_POST['223'])) {
 			addGrp($conID,223);
 		}
+		if(isset($_POST['227'])) {
+			addGrp($conID,227);
+		}
+		if(isset($_POST['229'])) {
+			addGrp($conID,229);
+		}
+		if(isset($_POST['231'])) {
+			addGrp($conID,231);
+		}
+		if(isset($_POST['233'])) {
+			addGrp($conID,233);
+		}
+		if(isset($_POST['235'])) {
+			addGrp($conID,235);
+		}
+		if(isset($_POST['237'])) {
+			addGrp($conID,237);
+		}
+		if(isset($_POST['239'])) {
+			addGrp($conID,239);
+		}
+		if(isset($_POST['241'])) {
+			addGrp($conID,241);
+		}
+		if(isset($_POST['243'])) {
+			addGrp($conID,243);
+		}
+		if(isset($_POST['245'])) {
+			addGrp($conID,245);
+		}
 	}
 	###Finally, lets alert them if they didnt post the required fields###
 	$email = $_POST['email'];
