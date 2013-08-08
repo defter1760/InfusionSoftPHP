@@ -1,5 +1,6 @@
 <?PHP
-
+require('posttovars.php');
+require('isoftdataservice.php');
 ##Search box for First Name, Last Name, ID
 ###
 ?>
@@ -56,4 +57,7 @@
 		?>
 	    />
 	</td>
+        <td>
+            <input type="submit" value="Submit" class="submit"/>
+        </td>
     </tr>
