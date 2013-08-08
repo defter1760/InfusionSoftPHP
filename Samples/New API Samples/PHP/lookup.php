@@ -58,6 +58,6 @@ require('isoftdataservice.php');
 	    />
 	</td>
         <td>
-            <input type="submit" value="Submit" class="submit"/>
+            <input type="submit" value="Look up" class="submit"/>
         </td>
     </tr>

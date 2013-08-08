@@ -14,7 +14,7 @@ if (isset($_POST))
     ##
     #
     ##
-    $contacts_fields = array('Id', 'FirstName','LastName', 'Email');
+    $contacts_fields = array('Id', 'FirstName','LastName','Email','StreetAddress1','City','State');
     if(isset($fName))
     {
         $query['FirstName'] = '%'.$fName.'%';
@@ -34,10 +34,10 @@ if (isset($_POST))
     $contacts_array = $contacts;
     
     echo "<pre>";
-    print_r($contacts_array);
+#    print_r($contacts_array);
     echo "</pre>";
 
-    echo "<table>";
+    echo "<table border=1>";
         echo "<tr>";
             echo "<th>";
                 echo "ID";
@@ -45,14 +45,54 @@ if (isset($_POST))
             echo "<th>";
                 echo "FirstName";
             echo "</th>";
-            
+            echo "<th>";
+                echo "LastName";
+            echo "</th>";
+            echo "<th>";
+                echo "Email";
+            echo "</th>";
+            echo "<th>";
+                echo "Street1";
+            echo "</th>";
+            echo "<th>";
+                echo "City";
+            echo "</th>";
+            echo "<th>";
+                echo "State";
+            echo "</th>";
+        echo "</tr>";
     
     foreach ($contacts_array as $val)
     {
-        echo '<br><br>';
-        echo $val['Id'];
-        echo '<br><br>';
+        echo "<tr>";
+            echo "<td>";
+            echo '<form action="forms.php" method="POST" class="form">';
+            echo '<input type="submit" value="';
+                echo $val['Id'];
+                echo '"" class="submit" name= "id" style="border: 0px; background-color: #fff;"/>';
+            echo '</form>';
+            echo "</td>";
+            echo "<td>";
+                echo $val['FirstName'];
+            echo "</td>";
+            echo "<td>";
+                echo $val['LastName'];
+            echo "</td>";
+            echo "<td>";
+                echo $val['Email'];
+            echo "</td>";
+            echo "<td>";
+                echo $val['StreetAddress1'];
+            echo "</td>";
+            echo "<td>";
+                echo $val['City'];
+            echo "</td>";
+            echo "<td>";
+                echo $val['State'];
+            echo "</td>";
+        echo "</tr>";
     }
+    echo "</table>";
 }
 else
 {
