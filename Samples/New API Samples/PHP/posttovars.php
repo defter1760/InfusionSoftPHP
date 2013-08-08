@@ -29,6 +29,7 @@ if (empty($City)) unset($City);
 
 if (isset($_POST['State'])) $State = $_POST['State'];
 if (empty($State)) unset($State);
+echo "Shitty State:".$State;
 
 if (isset($_POST['PostalCode'])) $PostalCode = $_POST['PostalCode'];
 if (empty($PostalCode)) unset($PostalCode);

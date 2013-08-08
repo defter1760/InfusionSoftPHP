@@ -120,6 +120,7 @@ if(!isset($ID))
 }#wrap everything with a condition::Only ADD if there was not an ID posted##END
 else
 {
+	require('isoftdataupdate.php');
 	echo "We posted an ID, We won't be adding a new contact but we can update them!";
 }
 ?>
