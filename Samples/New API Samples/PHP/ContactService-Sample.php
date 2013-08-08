@@ -1,6 +1,6 @@
 <?php
 
-include("xmlrpc-2.0/lib/xmlrpc.inc");
+#include("xmlrpc-2.0/lib/xmlrpc.inc");
 $client = new xmlrpc_client("https://lq134.infusionsoft.com/api/xmlrpc");
 $client->return_type = "phpvals";
 $client->setSSLVerifyPeer(FALSE);
@@ -120,6 +120,6 @@ if(!isset($ID))
 }#wrap everything with a condition::Only ADD if there was not an ID posted##END
 else
 {
-	echo 'We posted an ID, nothing done!';
+	echo "We posted an ID, We won't be adding a new contact but we can update them!";
 }
 ?>

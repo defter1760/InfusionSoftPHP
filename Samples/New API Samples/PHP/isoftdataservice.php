@@ -14,7 +14,14 @@ if (isset($_POST))
     ##
     #
     ##
-    $contacts_fields = array('Id', 'FirstName','LastName','Email','StreetAddress1','City','State');
+    $contacts_fields = array('Id', 'FirstName','LastName',
+                             'Email','StreetAddress1','StreetAddress2','City',
+                             'State','PostalCode','Country',
+                             'Phone1','Phone2');
+    if(isset($ID))
+    {
+        $query['Id'] = $ID;
+    }
     if(isset($fName))
     {
         $query['FirstName'] = '%'.$fName.'%';
@@ -30,69 +37,34 @@ if (isset($_POST))
     $contacts = $api->dsQuery('Contact', 1000, 0,$query, $contacts_fields);
 ##$contacts = $api->dsQuery('Contact', 1000, 0, array('Email' => "%"), $contacts_fields);
    
-    
-    $contacts_array = $contacts;
-    
-    echo "<pre>";
-#    print_r($contacts_array);
-    echo "</pre>";
-
-    echo "<table border=1>";
-        echo "<tr>";
-            echo "<th>";
-                echo "ID";
-            echo "</th>";
-            echo "<th>";
-                echo "FirstName";
-            echo "</th>";
-            echo "<th>";
-                echo "LastName";
-            echo "</th>";
-            echo "<th>";
-                echo "Email";
-            echo "</th>";
-            echo "<th>";
-                echo "Street1";
-            echo "</th>";
-            echo "<th>";
-                echo "City";
-            echo "</th>";
-            echo "<th>";
-                echo "State";
-            echo "</th>";
-        echo "</tr>";
-    
-    foreach ($contacts_array as $val)
+   
+   $count=0;
+    foreach ($contacts as $val0)
     {
-        echo "<tr>";
-            echo "<td>";
-            echo '<form action="forms.php" method="POST" class="form">';
-            echo '<input type="submit" value="';
-                echo $val['Id'];
-                echo '"" class="submit" name= "id" style="border: 0px; background-color: #fff;"/>';
-            echo '</form>';
-            echo "</td>";
-            echo "<td>";
-                echo $val['FirstName'];
-            echo "</td>";
-            echo "<td>";
-                echo $val['LastName'];
-            echo "</td>";
-            echo "<td>";
-                echo $val['Email'];
-            echo "</td>";
-            echo "<td>";
-                echo $val['StreetAddress1'];
-            echo "</td>";
-            echo "<td>";
-                echo $val['City'];
-            echo "</td>";
-            echo "<td>";
-                echo $val['State'];
-            echo "</td>";
-        echo "</tr>";
+        $count=$count+1;
     }
-    echo "</table>";
+    if($count=1)
+    {
+        foreach ($contacts as $val0)
+        {
+            $fName = $val0['FirstName'];
+            $lName = $val0['LastName'];
+            $email = $val0['Email'];
+            $StreetAddress1 = $val0['StreetAddress1'];
+            $StreetAddress2 = $val0['StreetAddress2'];
+            $City = $val0['City'];
+            $State = $val0['State'];
+            $PostalCode = $val0['PostalCode'];
+            $Country = $val0['Country'];
+            $phone = $val0['Phone1'];
+            $phone2 = $val0['Phone2'];
+            $State = $val0['State'];
+            $Country = $val0['Country'];
+        }
+#        echo "Narrowed it down to a single bloke!";
+    }
+#   echo $count;
+
 }
 else
 {
