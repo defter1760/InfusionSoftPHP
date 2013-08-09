@@ -645,6 +645,14 @@ require('isoftdataservice.php');
     </tr>
 </table>
 </form>
-
+<table>
+    <tr>
+	<td>
+	   <?PHP
+		echo '<iframe seamless=seamless src="./blandfileupload.php?id='.$ID.'" height="800" width="1500" ></iframe>';
+	    ?>
+	</td>
+    </tr>
+</table>
 </body>
 </html>

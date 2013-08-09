@@ -25,7 +25,7 @@ if(isset($_FILES["file"]))
         }
         else
         {
-            echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+            #echo "Upload: " . $_FILES["file"]["name"] . "<br>";
             if(is_dir("upload/".$id))
             {
                 #do something if the directory does exist
@@ -71,7 +71,7 @@ if(isset($_FILES["file2"]))
         }
         else
         {
-            echo "Upload: " . $_FILES["file2"]["name"] . "<br>";
+            #echo "Upload: " . $_FILES["file2"]["name"] . "<br>";
             if(is_dir("upload/".$id))
             {
                 #do something if the directory does exist
