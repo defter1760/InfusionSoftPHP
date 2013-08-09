@@ -3,6 +3,9 @@
 require('head.php');
 require('posttovars.php');
 require('isoftdataservice.php');
+    //echo "<pre>";
+    //print_r($_POST);
+    //echo "</pre>";
 ?>
 <body>
 
@@ -11,12 +14,15 @@ require('isoftdataservice.php');
 <table style="border:1px solid black;">
     <tr>
 	<td>
+	
 	    <h1>Nadia Tumas -> Infusionsoft API
 	    </h1>
+	    <a href=lookup.php>Back to Lookup</a>
 	    <table>
 		<tr>
 		    <td>
 		<?PHP
+		#print_r($_POST);
 		    require('ContactService-Sample.php');
 		    require('mySQLquery.php');
 		?>
@@ -276,19 +282,121 @@ require('isoftdataservice.php');
 			Life School:
 		    </td>
 		    <td>
-			<table>
-			    <tr>
-				<td align=left>
-				    <input type="checkbox" name="lifeSchoolWisdom" <?PHP if(isset($lifeSchoolWisdom)) echo 'checked=checked'; ?>/> Wisdom
+			<table style="border-collapse:collapse;" style="border:1px solid grey;">
+			    <tr align=left style="border:1px solid grey;">
+				<td >
+				    Wisdom<br><br>
 				</td>
-				<td align=left>
-				    <input type=checkbox name="lifeSchoolLove" <?PHP if(isset($lifeSchoolLove)) echo 'checked=checked'; ?>/> Love
+				<td >
+				    Y<input type="radio" name="lifeSchoolWisdom" value="y"
+					<?PHP if(isset($lifeSchoolWisdom))
+					{
+					
+					    if($lifeSchoolWisdom == 'y')
+					    {
+						echo 'checked';    
+					    }
+					}
+					?>
+				    />
+				    <br>N<input type="radio" name="lifeSchoolWisdom" value="n"
+					<?PHP if(isset($lifeSchoolWisdom))
+					{
+					
+					    if($lifeSchoolWisdom == 'n')
+					    {
+						echo 'checked';    
+					    }
+					}
+					?>
+				    />
 				</td>
+			    </tr>
+			    <tr align=left style="border:1px solid #F5F5F5;">
 				<td align=left>
-				    <input type=checkbox name="lifeSchoolService" <?PHP if(isset($lifeSchoolService)) echo 'checked=checked'; ?>/> Service
+				    Love<br><br>
 				</td>
+				<td align=left >
+				    Y<input type="radio" name="lifeSchoolLove" value="y"
+					<?PHP if(isset($lifeSchoolLove))
+					{
+					
+					    if($lifeSchoolLove == 'y')
+					    {
+						echo 'checked';    
+					    }
+					}
+					?>
+				    />
+				    <br>N<input type="radio" name="lifeSchoolLove" value="n"
+					<?PHP if(isset($lifeSchoolLove))
+					{
+					
+					    if($lifeSchoolLove == 'n')
+					    {
+						echo 'checked';    
+					    }
+					}
+					?>
+				    /> 
+				</td>
+			    </tr>
+			    <tr align=left style="border:1px solid grey;">
 				<td align=left>
-				    <input type=checkbox name="lifeSchoolPeace" <?PHP if(isset($lifeSchoolPeace)) echo 'checked=checked'; ?>/> Peace
+				    Service<br><br>
+				</td>
+				<td>
+				    Y<input type="radio" name="lifeSchoolService" value="y"
+					<?PHP if(isset($lifeSchoolService))
+					{
+					
+					    if($lifeSchoolService == 'y')
+					    {
+						echo 'checked';    
+					    }
+					}
+					?>
+				    />
+				    <br>N<input type="radio" name="lifeSchoolService" value="n"
+					<?PHP if(isset($lifeSchoolService))
+					{
+					
+					    if($lifeSchoolService == 'n')
+					    {
+						echo 'checked';    
+					    }
+					}
+					?>
+				    />
+				</td>
+			    </tr>
+			    <tr align=left style="border:1px solid #F5F5F5;">
+				<td align=left>
+				    Peace<br><br>
+				</td>
+				<td>
+				    Y<input type="radio" name="lifeSchoolPeace" value="y"
+					<?PHP if(isset($lifeSchoolPeace))
+					{
+					
+					    if($lifeSchoolPeace == 'y')
+					    {
+						echo 'checked';    
+					    }
+					}
+					?>
+				    />
+				    <br>N<input type="radio" name="lifeSchoolPeace" value="n"
+					<?PHP if(isset($lifeSchoolPeace))
+					{
+					
+					    if($lifeSchoolPeace == 'n')
+					    {
+						echo 'checked';    
+					    }
+					}
+					?>
+				    />
 				</td>
 			    </tr>
 			</table>

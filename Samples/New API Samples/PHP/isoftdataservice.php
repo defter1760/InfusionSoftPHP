@@ -39,6 +39,7 @@ if (isset($_POST))
    
    
    $count=0;
+
     foreach ($contacts as $val0)
     {
         $count=$count+1;

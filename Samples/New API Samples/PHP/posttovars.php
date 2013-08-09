@@ -29,7 +29,6 @@ if (empty($City)) unset($City);
 
 if (isset($_POST['State'])) $State = $_POST['State'];
 if (empty($State)) unset($State);
-echo "Shitty State:".$State;
 
 if (isset($_POST['PostalCode'])) $PostalCode = $_POST['PostalCode'];
 if (empty($PostalCode)) unset($PostalCode);
@@ -46,16 +45,16 @@ if (empty($lifePurpose)) unset($lifePurpose);
 if (isset($_POST['lifeLesson'])) $lifeLesson = $_POST['lifeLesson'];
 if (empty($lifeLesson)) unset($lifeLesson);
 
-if (isset($_POST['lifeSchoolWisdom'])) $lifeSchoolWisdom = 'y';
+if (isset($_POST['lifeSchoolWisdom'])) $lifeSchoolWisdom = $_POST['lifeSchoolWisdom'];
 if (empty($lifeSchoolWisdom)) unset($lifeSchoolWisdom);
 
-if (isset($_POST['lifeSchoolLove'])) $lifeSchoolLove  = 'y';
+if (isset($_POST['lifeSchoolLove'])) $lifeSchoolLove  = $_POST['lifeSchoolLove'];
 if (empty($lifeSchoolLove)) unset($lifeSchoolLove);
 
-if (isset($_POST['lifeSchoolService'])) $lifeSchoolService  = 'y';
+if (isset($_POST['lifeSchoolService'])) $lifeSchoolService  = $_POST['lifeSchoolService'];
 if (empty($lifeSchoolService)) unset($lifeSchoolService);
 
-if (isset($_POST['lifeSchoolPeace'])) $lifeSchoolPeace  = 'y';
+if (isset($_POST['lifeSchoolPeace'])) $lifeSchoolPeace  = $_POST['lifeSchoolPeace'];
 if (empty($lifeSchoolPeace)) unset($lifeSchoolPeace);
 
 if (isset($_POST['importantToClient'])) $importantToClient = $_POST['importantToClient'];

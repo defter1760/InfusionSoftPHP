@@ -10,7 +10,7 @@ if (isset($_POST))
     ##
     #
     ##
-    if(!class_exists(iSDK))
+    if(!class_exists('iSDK'))
     {
        require("../../../src/isdk.php"); 
     }
@@ -18,54 +18,54 @@ if (isset($_POST))
     $api = new iSDK;
     $api->cfgCon("lq134","5b67531ca26e2b85911527484e60b3ca");
     
-    if(isset($fName))
+    if(isset($_POST['fName']))
     {
-        $query2['FirstName'] = $fName;
+        $query2['FirstName'] = $_POST['fName'];
     }
-    if(isset($lName))
+    if(isset($_POST['LastName']))
     {
-        $query2['LastName'] = $lName;
+        $query2['LastName'] = $_POST['lName'];
     }
-    if(isset($email))
+    if(isset($_POST['Email']))
     {
-        $query2['Email'] = $email;
+        $query2['Email'] = $_POST['email'];
     }
-    if(isset($StreetAddress1))
+    if(isset($_POST['StreetAddress1']))
     {
-        $query2['StreetAddress1'] = $StreetAddress1;
+        $query2['StreetAddress1'] = $_POST['StreetAddress1'];
     }
-    if(isset($StreetAddress2))
+    if(isset($_POST['StreetAddress2']))
     {
-        $query2['StreetAddress2'] = $StreetAddress2;
+        $query2['StreetAddress2'] = $_POST['StreetAddress2'];;
     }
-    if(isset($City))
+    if(isset($_POST['City']))
     {
-        $query2['City'] = $City;
+        $query2['City'] = $_POST['City'];
     }
     if(isset($_POST['State']))
     {
         $query2['State'] = $_POST['State'];
     }
-    if(isset($PostalCode))
+    if(isset($_POST['PostalCode']))
     {
-        $query2['PostalCode'] = $PostalCode;
+        $query2['PostalCode'] = $_POST['PostalCode'];
     }
-    if(isset($Country))
+    if(isset($_POST['Country']))
     {
-        $query2['Country'] = $Country;
+        $query2['Country'] = $_POST['Country'];
     }
-    if(isset($phone))
+    if(isset($_POST['phone']))
     {
-        $query2['Phone1'] = $phone;
+        $query2['Phone1'] = $_POST['phone'];
     }
-    if(isset($phone2))
+    if(isset($_POST['phone2']))
     {
-        $query2['Phone2'] = $phone2;
+        $query2['Phone2'] = $_POST['phone2'];
     }
     $updatecon = $api->updateCon($ID,$query2);
-    echo "<pre>";
-    echo $City;
-#    print_r($_POST);
+//    echo "<pre>";
+   echo $City;
+//#    print_r($_POST);
    print_r($query2);
     echo "</pre>";
 }

@@ -1,7 +1,7 @@
 <?PHP
 require('mySQLconnect.php');
 
-#$ID='2467';
+
 if(isset($ID))
 {
     
@@ -11,12 +11,16 @@ if(isset($ID))
     while ($line = mysql_fetch_array($result, MYSQL_ASSOC))
     {
 #        $lifePurpose = $line['lifePurpose'];
-   
+        $LineID= $line['id'];
+        $LineWisdom= $line['lifeSchoolWisdom'];
+        $LineLove= $line['lifeSchoolLove'];
+        $LineService= $line['lifeSchoolService'];
+        $LinePeace= $line['lifeSchoolPeace'];
     }
     
-    $LineID= $line['id'];
+
     
-    if ($LineID = $ID)
+    if ($LineID == $ID)
     {
         if(isset($fName))
         {
@@ -53,26 +57,102 @@ if(isset($ID))
             $query = "UPDATE clients set lifePurpose='".$lifePurpose."' where id='".$ID."'";
             $result = mysql_query($query) or die('Query failed: ' . mysql_error());
         }
+
         if(isset($lifeSchoolWisdom))
         {
-            $query = "UPDATE clients set lifeSchoolWisdom='".$lifeSchoolWisdom."' where id='".$ID."'";
-            $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+            if($lifeSchoolWisdom == 'y')
+            {
+                $query = "UPDATE clients set lifeSchoolWisdom='y' where id='".$ID."'";
+                $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+
+            }
+            
+            else
+            {
+                $query = "UPDATE clients set lifeSchoolWisdom='n' where id='".$ID."'";
+                $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+
+            }
         }
+        else
+        {
+            if ($LineWisdom != 'y')
+            {
+                $query = "UPDATE clients set lifeSchoolWisdom='n' where id='".$ID."'";
+                $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+
+            }
+
+        }        
+
         if(isset($lifeSchoolLove))
         {
-            $query = "UPDATE clients set lifeSchoolLove='".$lifeSchoolLove."' where id='".$ID."'";
-            $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+            if($lifeSchoolLove == 'y')
+            {
+                $query = "UPDATE clients set lifeSchoolLove='y' where id='".$ID."'";
+                $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+            }
+            else
+            {
+                $query = "UPDATE clients set lifeSchoolLove='n' where id='".$ID."'";
+                $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+            }
         }
+        else
+        {
+            if ($LineLove != 'y')
+            {
+                $query = "UPDATE clients set lifeSchoolLove='n' where id='".$ID."'";
+                $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+
+            }
+
+        }         //}
+
         if(isset($lifeSchoolService))
         {
-            $query = "UPDATE clients set lifeSchoolService='".$lifeSchoolService."' where id='".$ID."'";
-            $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+            if($lifeSchoolService == 'y')
+            {
+                $query = "UPDATE clients set lifeSchoolService='y' where id='".$ID."'";
+                $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+            }
+            else
+            {
+                $query = "UPDATE clients set lifeSchoolService='n' where id='".$ID."'";
+                $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+            }
         }
+        else
+        {
+            if ($LineService != 'y')
+            {
+                $query = "UPDATE clients set lifeSchoolService='n' where id='".$ID."'";
+                $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+            }
+        }
+        
         if(isset($lifeSchoolPeace))
         {
-            $query = "UPDATE clients set lifeSchoolPeace='".$lifeSchoolPeace."' where id='".$ID."'";
-            $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+            if($lifeSchoolPeace == 'y')
+            {
+                $query = "UPDATE clients set lifeSchoolPeace='y' where id='".$ID."'";
+                $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+            }
+            else
+            {
+                $query = "UPDATE clients set lifeSchoolPeace='n' where id='".$ID."'";
+                $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+            }
         }
+        else
+        {
+            if ($LinePeace != 'y')
+            {
+                $query = "UPDATE clients set lifeSchoolPeace='n' where id='".$ID."'";
+                $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+            }
+        }
+       
         if(isset($lifeLesson))
         {
             $query = "UPDATE clients set lifeLesson='".$lifeLesson."' where id='".$ID."'";
@@ -93,17 +173,18 @@ if(isset($ID))
             $query = "UPDATE clients set ahaMoment='".$ahaMoment."' where id='".$ID."'";
             $result = mysql_query($query) or die('Query failed: ' . mysql_error());
         }             
+    
+    
     }
     else
     {
-        echo "HEE";
         $query = "insert into clients (id,fName,lName,email,phone,phone2,specialInfo,lifePurpose,lifeLesson,lifeSchoolWisdom,lifeSchoolLove,lifeSchoolService,lifeSchoolPeace,importantToClient,ahaMoment,recordingMade,skypeName) values('".$ID."','".$fName."','".$lName."','".$email."','".$phone."','".$phone2."','".$specialInfo."','".$lifePurpose."','".$lifeLesson."','".$lifeSchoolWisdom."','".$lifeSchoolLove."','".$lifeSchoolService."','".$lifeSchoolPeace."','".$importantToClient."','".$ahaMoment."','".$recordingMade."','".$skypeName."')";
         $result = mysql_query($query) or die('Query failed: ' . mysql_error());    
 
     }
     $query2 = 'SELECT * FROM clients where ID='.$ID;
     $result2 = mysql_query($query2) or die('Query failed: ' . mysql_error());
-    while ($line2 = mysql_fetch_array($result, MYSQL_ASSOC))
+    while ($line2 = mysql_fetch_array($result2, MYSQL_ASSOC))
     {
         $specialInfo = $line2['specialInfo'];
         $lifePurpose = $line2['lifePurpose'];
@@ -113,9 +194,13 @@ if(isset($ID))
         $lifeSchoolPeace = $line2['lifeSchoolPeace'];
         $lifeLesson = $line2['lifeLesson'];
         $importantToClient = $line2['importantToClient'];
-        $lifeSchoolLesson = $line2['lifeSchoolLesson'];
         $ahaMoment = $line2['ahaMoment'];        
     }
+#    echo "<pre>";
+#    echo $City;
+#    print_r($_POST);
+#      echo $lifeLesson;
+#    echo "</pre>";
     ##
     #not a match as in there is no one in the db with this ID, so, let's add them
     ##
@@ -131,8 +216,8 @@ else
     }
     else
     {
-        $query = "insert into clients (id,fName,lName,email,phone,phone2,specialInfo,lifePurpose,lifeLesson,lifeSchoolWisdom,lifeSchoolLove,lifeSchoolService,lifeSchoolPeace,importantToClient,ahaMoment,recordingMade,skypeName) values('".$ID."','".$fName."','".$lName."','".$email."','".$phone."','".$phone2."','".$specialInfo."','".$lifePurpose."','".$lifeLesson."','".$lifeSchoolWisdom."','".$lifeSchoolLove."','".$lifeSchoolService."','".$lifeSchoolPeace."','".$importantToClient."','".$ahaMoment."','".$recordingMade."','".$skypeName."')";
-        $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+#        $query = "insert into clients (id,fName,lName,email,phone,phone2,specialInfo,lifePurpose,lifeLesson,lifeSchoolWisdom,lifeSchoolLove,lifeSchoolService,lifeSchoolPeace,importantToClient,ahaMoment,recordingMade,skypeName) values('".$ID."','".$fName."','".$lName."','".$email."','".$phone."','".$phone2."','".$specialInfo."','".$lifePurpose."','".$lifeLesson."','".$lifeSchoolWisdom."','".$lifeSchoolLove."','".$lifeSchoolService."','".$lifeSchoolPeace."','".$importantToClient."','".$ahaMoment."','".$recordingMade."','".$skypeName."')";
+#        $result = mysql_query($query) or die('Query failed: ' . mysql_error());
         
     }
     
