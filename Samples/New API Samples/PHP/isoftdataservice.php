@@ -48,7 +48,7 @@ if (isset($_POST))
     }
     if(is_array($contacts))
     {
-        if($count=1)
+        if($count==1)
         {
             foreach ($contacts as $val0)
             {

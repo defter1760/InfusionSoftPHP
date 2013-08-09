@@ -13,6 +13,7 @@ require('isoftdataservice.php');
 	    <h1>Nadia Tumas -> Infusionsoft API
 	    </h1>
 <a href=forms.php>Back to Add or Modify</a>
+<br><br>Use % for wildcard, like H%tchin%s if needed.<br><br>
 <form action="lookup.php" method="POST" class="form">
 <table style="border:1px solid black;">
 
@@ -33,6 +34,19 @@ require('isoftdataservice.php');
 		    else
 		    {
 			echo 'value='.$conID;
+		    }
+		?>
+	    />
+	</td>
+<td>
+	    Email
+	</td>
+	<td >
+	    <input type="text" name="email"
+		<?PHP
+		    if(isset($email))
+		    {
+			echo 'value="'.$email.'"';
 		    }
 		?>
 	    />
@@ -82,27 +96,27 @@ if(isset($contacts))
 #    print_r($contacts_array);
     echo "</pre>";
 
-    echo "<table border=1>";
-        echo "<tr>";
-            echo "<th>";
+    echo '<table border-collapse:collapse;>';
+        echo '<tr style="border:1px solid black;">';
+            echo '<th style="border:1px solid black;">';
                 echo "ID";
             echo "</th>";
-            echo "<th>";
+            echo '<th style="border:1px solid black;">';
                 echo "FirstName";
             echo "</th>";
-            echo "<th>";
+            echo '<th style="border:1px solid black;">';
                 echo "LastName";
             echo "</th>";
-            echo "<th>";
+            echo '<th style="border:1px solid black;">';
                 echo "Email";
             echo "</th>";
-            echo "<th>";
+            echo '<th style="border:1px solid black;">';
                 echo "Street1";
             echo "</th>";
-            echo "<th>";
+            echo '<th style="border:1px solid black;">';
                 echo "City";
             echo "</th>";
-            echo "<th>";
+            echo '<th style="border:1px solid black;">';
                 echo "State";
             echo "</th>";
         echo "</tr>";
@@ -110,30 +124,30 @@ if(isset($contacts))
     {
         foreach ($contacts_array as $val)
         {
-            echo "<tr>";
-                echo "<td>";
+            echo '<tr style="border:1px solid black;">';
+                echo '<td style="border:1px solid black;">';
                 echo '<form action="forms.php" method="POST" class="form">';
                 echo '<input type="submit" value="';
                     echo $val['Id'];
                     echo '" class="submit" name="ID" />';
                 echo '</form>';
                 echo "</td>";
-                echo "<td>";
+                echo '<td style="border:1px solid black;">';
                     echo $val['FirstName'];
                 echo "</td>";
-                echo "<td>";
+                echo '<td style="border:1px solid black;">';
                     echo $val['LastName'];
                 echo "</td>";
-                echo "<td>";
+                echo '<td style="border:1px solid black;">';
                     echo $val['Email'];
                 echo "</td>";
-                echo "<td>";
+                echo '<td style="border:1px solid black;">';
                     echo $val['StreetAddress1'];
                 echo "</td>";
-                echo "<td>";
+                echo '<td style="border:1px solid black;">';
                     echo $val['City'];
                 echo "</td>";
-                echo "<td>";
+                echo '<td style="border:1px solid black;">';
                     echo $val['State'];
                 echo "</td>";
             echo "</tr>";
