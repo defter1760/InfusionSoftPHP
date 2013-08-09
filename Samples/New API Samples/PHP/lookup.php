@@ -1,11 +1,20 @@
 <?PHP
+require('head.php');
 require('posttovars.php');
 require('isoftdataservice.php');
 ##Search box for First Name, Last Name, ID
 ###
 ?>
-
+<body>
+<table style="border:1px solid black;">
+    <tr>
+	<td>
+	
+	    <h1>Nadia Tumas -> Infusionsoft API
+	    </h1>
+<a href=forms.php>Back to Add or Modify</a>
 <form action="lookup.php" method="POST" class="form">
+<table style="border:1px solid black;">
 
     <tr>
 	<td>
@@ -63,6 +72,7 @@ require('isoftdataservice.php');
     </tr>
 </table>
 </form>
+
 <?PHP
 if(isset($contacts))
 {
@@ -105,7 +115,7 @@ if(isset($contacts))
                 echo '<form action="forms.php" method="POST" class="form">';
                 echo '<input type="submit" value="';
                     echo $val['Id'];
-                    echo '"" class="submit" name="ID" style="border: 0px; background-color: #fff;"/>';
+                    echo '" class="submit" name="ID" />';
                 echo '</form>';
                 echo "</td>";
                 echo "<td>";
@@ -133,4 +143,7 @@ if(isset($contacts))
     
 }
 ?>
-    
+        </td>
+    </tr>
+</table>
+</body>
