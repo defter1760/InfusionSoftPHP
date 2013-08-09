@@ -41,6 +41,7 @@ require('blandfileuploadhead.php');
                     #if (file_exists("upload/" . $_FILES["file"]["name"]))
                     if (file_exists("upload/285/right_hand.png"))
                     {
+                        echo '<iframe seamless=seamless src=/zoom-master/zoom.php?id=285&hand=right" height="742" width="742" ';
                         echo '<label class="filter-type" for="filter">Right hand already uploaded.</label>';
                         echo '<input type="checkbox" id="filter">';
                             echo '<div class="sidebarlistscroll">';
