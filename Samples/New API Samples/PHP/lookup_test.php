@@ -1,5 +1,5 @@
 <?PHP
-require("../../../src/isdk.php");
+require("./src/isdk.php");
 $api = new iSDK;
 $api->cfgCon("lq134","5b67531ca26e2b85911527484e60b3ca");
 

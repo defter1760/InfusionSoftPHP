@@ -12,7 +12,7 @@ if (isset($_POST))
     ##
     if(!class_exists('iSDK'))
     {
-       require("../../../src/isdk.php"); 
+       require("./src/isdk.php"); 
     }
    
     $api = new iSDK;
