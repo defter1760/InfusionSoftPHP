@@ -39,30 +39,35 @@ if (isset($_POST))
    
    
    $count=0;
-
-    foreach ($contacts as $val0)
-    {
-        $count=$count+1;
-    }
-    if($count=1)
+    if(is_array($contacts))
     {
         foreach ($contacts as $val0)
         {
-            $fName = $val0['FirstName'];
-            $lName = $val0['LastName'];
-            $email = $val0['Email'];
-            $StreetAddress1 = $val0['StreetAddress1'];
-            $StreetAddress2 = $val0['StreetAddress2'];
-            $City = $val0['City'];
-            $State = $val0['State'];
-            $PostalCode = $val0['PostalCode'];
-            $Country = $val0['Country'];
-            $phone = $val0['Phone1'];
-            $phone2 = $val0['Phone2'];
-            $State = $val0['State'];
-            $Country = $val0['Country'];
+            $count=$count+1;
         }
-#        echo "Narrowed it down to a single bloke!";
+    }
+    if(is_array($contacts))
+    {
+        if($count=1)
+        {
+            foreach ($contacts as $val0)
+            {
+                $fName = $val0['FirstName'];
+                $lName = $val0['LastName'];
+                $email = $val0['Email'];
+                $StreetAddress1 = $val0['StreetAddress1'];
+                $StreetAddress2 = $val0['StreetAddress2'];
+                $City = $val0['City'];
+                $State = $val0['State'];
+                $PostalCode = $val0['PostalCode'];
+                $Country = $val0['Country'];
+                $phone = $val0['Phone1'];
+                $phone2 = $val0['Phone2'];
+                $State = $val0['State'];
+                $Country = $val0['Country'];
+            }
+    #        echo "Narrowed it down to a single bloke!";
+        }
     }
 #   echo $count;
 

@@ -64,10 +64,10 @@ if (isset($_POST))
     }
     $updatecon = $api->updateCon($ID,$query2);
 //    echo "<pre>";
-   echo $City;
+#   echo $City;
 //#    print_r($_POST);
-   print_r($query2);
-    echo "</pre>";
+#   print_r($query2);
+#    echo "</pre>";
 }
 else
 {
