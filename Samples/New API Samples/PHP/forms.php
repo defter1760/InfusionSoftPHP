@@ -17,10 +17,11 @@ require('isoftdataservice.php');
 	
 	    <h1>Nadia Tumas -> Infusionsoft API
 	    </h1>
-	    <a href=lookup.php>Back to Lookup</a>
 	    <table>
 		<tr>
 		    <td>
+				    If this is a new client, fill out this form. <br>Or if this is an existing client, click <a href=lookup.php>Here.</a> <br>Not sure? Click <a href=lookup.php>Here.</a> 
+
 		<?PHP
 		#print_r($_POST);
 		    require('ContactService-Sample.php');

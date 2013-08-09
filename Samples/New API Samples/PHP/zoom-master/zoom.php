@@ -57,8 +57,8 @@ $id = $_GET['id'];
 
 	<span class='zoom' id='ex3'>
 		<?PHP
-			echo "<img src='../upload/".$id."/".$hand;
-			echo "_hand.jpg' width='740' height='740' alt=''/>";
+			echo "<img src='../upload/".$id."/".$id."_".$hand;
+			echo "_hand.jpg' width='490' height='490' alt=''/>";
 		?>
 		<p>Click to activate</p>
 	</span>

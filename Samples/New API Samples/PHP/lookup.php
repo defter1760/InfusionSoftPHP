@@ -13,7 +13,7 @@ require('isoftdataservice.php');
 	    <h1>Nadia Tumas -> Infusionsoft API
 	    </h1>
 <a href=forms.php>Back to Add or Modify</a>
-<br><br>Use % for wildcard, like H%tchin%s if needed.<br><br>
+<br><br>Use % for wildcard, like H%tchin%s if needed.<br><br>No results found? Use this, click <a href=forms.php>Here.</a><br><br>
 <form action="lookup.php" method="POST" class="form">
 <table style="border:1px solid black;">
 

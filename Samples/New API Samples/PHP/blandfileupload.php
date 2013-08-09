@@ -10,10 +10,10 @@ require('blandfileuploadhead.php');
 }
 
 .sidebarlistscroll {
-    width: 220px;
-    height: 200px;
+    width: 320px;
+    height: 30px;
     margin-bottom: 15px;
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
     border: none;
     visibility: hidden;
 }
@@ -25,36 +25,101 @@ require('blandfileuploadhead.php');
 </head>
 <body>
 
-    <form action="blandfileupload.php" method="post"
-    enctype="multipart/form-data">
-    <table>
+
+    <table border=1 width="1200px">
+        <tr>
+            <td width="600">
+                <label for="file">Left hand:</label>
+            </td>
+            <td width="600">
+                <label for="file">Right hand:</label>
+            </td>
+        </tr>
         <tr>
             <td>
-                <label for="file">Left hand:</label>
-                <input type="file" name="file" id="file"><br>
-                <input type="submit" name="submit" value="Submit">
-                </form>
-            </td>
-            <td>
-                <label for="file">Right hand:</label>
+                <?PHP echo '<form action="blandfileupload.php?id='.$id;
+                 echo '" method="post" enctype="multipart/form-data">';
+                ?>
                 <?PHP
-                    #if (file_exists("upload/" . $_FILES["file"]["name"]))
-                    if (file_exists("upload/285/right_hand.png"))
+                   ## if (file_exists("upload/" . $_FILES["file"]["name"]))
+                    if (file_exists("upload/".$id."/".$id."_left_hand.jpg"))
                     {
-                        echo '<iframe seamless=seamless src=/zoom-master/zoom.php?id=285&hand=right" height="742" width="742" ';
-                        echo '<label class="filter-type" for="filter">Right hand already uploaded.</label>';
+                        echo '<label class="filter-type" for="filter">Left hand already uploaded. Click to replace.</label>';
                         echo '<input type="checkbox" id="filter">';
                             echo '<div class="sidebarlistscroll">';
                             echo '<ul>';
-                                echo '<li>item 1</li>';
-                                echo '<li>item 2</li>';
-                                echo '<li>item 3</li>';
+                echo '<input type="file" name="file2" id="file"><br>';
+                echo '<input type="submit" name="submit" value="Submit">';
                     echo '</ul>';
-                echo '</div>';
+                echo '</div>';                
+                    }
+                    else
+                    {
+                        echo '<input type="file" name="file2" id="file"><br>';
+                        echo '<input type="submit" name="submit" value="Submit">';  
                     }
                 ?>
-                <input type="file" name="file" id="file"><br>
-                <input type="submit" name="submit" value="Submit">
+                </form>
+            </td>
+            <td>
+                <?PHP echo '<form action="blandfileupload.php?id='.$id;
+                 echo '" method="post" enctype="multipart/form-data">';
+                ?>
+                <?PHP
+                   ## if (file_exists("upload/" . $_FILES["file"]["name"]))
+                    if (file_exists("upload/".$id."/".$id."_right_hand.jpg"))
+                    {
+                        echo '<label class="filter-type" for="filter">Right hand already uploaded. Click to replace.</label>';
+                        echo '<input type="checkbox" id="filter">';
+                            echo '<div class="sidebarlistscroll">';
+                            echo '<ul>';
+                echo '<input type="file" name="file" id="file"><br>';
+                echo '<input type="submit" name="submit" value="Submit">';
+                    echo '</ul>';
+                echo '</div>';                
+                    }
+                    else
+                    {
+                        echo '<input type="file" name="file" id="file"><br>';
+                        echo '<input type="submit" name="submit" value="Submit">';  
+                    }
+                ?>
+                                </form>
+            </td>
+        </tr>
+        <td>
+            <?PHP
+            ## if (file_exists("upload/" . $_FILES["file"]["name"]))
+            if (file_exists("upload/".$id."/".$id."_left_hand.jpg"))
+            {
+                echo '<iframe seamless=seamless src="./zoom-master/zoom.php?id='.$id.'&hand=left" height="500" width="500" ></iframe>';
+            }
+            
+            ?>
+        </td>
+        <td>
+            <?PHP
+            ## if (file_exists("upload/" . $_FILES["file"]["name"]))
+            if (file_exists("upload/".$id."/".$id."_right_hand.jpg"))
+            {
+                echo '<iframe seamless=seamless src="./zoom-master/zoom.php?id='.$id.'&hand=right" height="500" width="500" ></iframe>';
+            }
+            
+            ?>
+        </td>
+        
+            
+        </tr>
+
+
+        <tr>
+
+        </tr>
+            
+            
+
+<!--                <input type="file" name="file" id="file"><br>
+                <input type="submit" name="submit" value="Submit">-->
                 </form>
                 
             </td>
@@ -62,6 +127,39 @@ require('blandfileuploadhead.php');
     </table>
     
 
-
+<table>
+    <tr>
+        <th>
+            Files
+        </th>
+    </tr>
+    
+            <?PHP
+            if(is_dir("upload/".$id))
+            {
+                $files1 = scandir("upload/".$id);
+                foreach($files1 as $valfile)
+                {
+                    if($valfile != '.')
+                    {
+                        if($valfile != '..')
+                        {
+                            echo '<tr>';
+                                echo '<td>';
+                                    echo '<a href="upload/'.$id.'/'.$valfile.'">'.$valfile.'</a>';
+                                echo '</td>';
+                            echo '</tr>';
+                        }
+                    }
+                }
+            }
+            else
+            {
+                mkdir("upload/".$id);
+            }
+            ?>
+        </td>
+    </tr>
+</table>
 </body>
 </html>
