@@ -78,48 +78,29 @@ else
     echo "Nothing Posted, Nothing to see here.";
 }
 require('series.php');
-$GroupTest[][103]='Group103';
-    echo '<br><br>';
-        echo '<br><br>';
-print_r($GroupTest);
-    echo '<br><br>';
-        echo '<br><br>';
+function array_search_key( $needle_key, $array ) {
+  foreach($array AS $key=>$value){
+    if($key == $needle_key) return $value;
+    if(is_array($value)){
+      if( ($result = array_search_key($needle_key,$value)) !== false)
+        return $result;
+    }
+  }
+  return false;
+}
+
+
 if(isset($Groups))
 {
     $Group = explode(",",$Groups);
-    
-    $key = array_search('103', $Group);    
+    #print_r($Group);
+    foreach($GroupSeries as $groupkey => $groupval)
     {
-        if(!is_null($key))
+        $match= array_search_key($groupkey,$Group);
+        if($GroupSeries[$match] != 'Group0')
         {
-            echo 'DA KEY:<br><br>'.$key.'<br><br>';
+            $$GroupSeries[$match] = 'y';
         }
     }
-    $key = array_search('105', $Group);    
-    {
-        if(!is_null($key))
-        {
-            echo 'DA KEY:<br><br>'.$key.'<br><br>';
-        }
-    }
-    $key = array_search('106', $Group);    
-    {
-        if(!is_null($key))
-        {
-            echo 'DA KEY:<br><br>'.$key.'<br><br>';
-        }
-    }    
-    echo '<br><br>Groups:'.$Group[0].' AND '.$Group[1];
-    //foreach($Group as $vargroup)
-    //{
-    //    
-    //    if($vargroup == 103)
-    //    {
-    //        $group103 = '';
-    //    }
-        $vargroup = 'y';
-    //}
-    #echo 'Group 103 set to'.$103;
-    echo '<br><br>';
 }
 ?>
