@@ -17,7 +17,7 @@ if (isset($_POST))
     $contacts_fields = array('Id', 'FirstName','LastName',
                              'Email','StreetAddress1','StreetAddress2','City',
                              'State','PostalCode','Country',
-                             'Phone1','Phone2');
+                             'Phone1','Phone2','Groups');
     if(isset($ID))
     {
         $query['Id'] = $ID;
@@ -65,6 +65,7 @@ if (isset($_POST))
                 $phone2 = $val0['Phone2'];
                 $State = $val0['State'];
                 $Country = $val0['Country'];
+                $Groups = $val0['Groups'];
             }
     #        echo "Narrowed it down to a single bloke!";
         }
@@ -75,5 +76,50 @@ if (isset($_POST))
 else
 {
     echo "Nothing Posted, Nothing to see here.";
+}
+require('series.php');
+$GroupTest[][103]='Group103';
+    echo '<br><br>';
+        echo '<br><br>';
+print_r($GroupTest);
+    echo '<br><br>';
+        echo '<br><br>';
+if(isset($Groups))
+{
+    $Group = explode(",",$Groups);
+    
+    $key = array_search('103', $Group);    
+    {
+        if(!is_null($key))
+        {
+            echo 'DA KEY:<br><br>'.$key.'<br><br>';
+        }
+    }
+    $key = array_search('105', $Group);    
+    {
+        if(!is_null($key))
+        {
+            echo 'DA KEY:<br><br>'.$key.'<br><br>';
+        }
+    }
+    $key = array_search('106', $Group);    
+    {
+        if(!is_null($key))
+        {
+            echo 'DA KEY:<br><br>'.$key.'<br><br>';
+        }
+    }    
+    echo '<br><br>Groups:'.$Group[0].' AND '.$Group[1];
+    //foreach($Group as $vargroup)
+    //{
+    //    
+    //    if($vargroup == 103)
+    //    {
+    //        $group103 = '';
+    //    }
+        $vargroup = 'y';
+    //}
+    #echo 'Group 103 set to'.$103;
+    echo '<br><br>';
 }
 ?>

@@ -2,7 +2,7 @@
 <?PHP
 require('head.php');
 require('posttovars.php');
-require('isoftdataservice.php');
+
     //echo "<pre>";
     //print_r($_POST);
     //echo "</pre>";
@@ -24,6 +24,7 @@ require('isoftdataservice.php');
 
 		<?PHP
 		#print_r($_POST);
+		    require('isoftdataservice.php');
 		    require('ContactService-Sample.php');
 		    require('mySQLquery.php');
 		?>

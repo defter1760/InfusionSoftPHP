@@ -146,7 +146,7 @@ require('blandfileuploadhead.php');
                         {
                             echo '<tr>';
                                 echo '<td>';
-                                    echo '<a href="upload/'.$id.'/'.$valfile.'">'.$valfile.'</a>';
+                                    echo '<a href="upload/'.$id.'/'.$valfile.'" target="parent">'.$valfile.'</a>';
                                 echo '</td>';
                             echo '</tr>';
                         }
