@@ -22,7 +22,7 @@ if (isset($_POST))
     {
         $query2['FirstName'] = $_POST['fName'];
     }
-    if(isset($_POST['LastName']))
+    if(isset($_POST['lName']))
     {
         $query2['LastName'] = $_POST['lName'];
     }
