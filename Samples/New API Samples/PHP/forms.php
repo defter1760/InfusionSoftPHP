@@ -478,7 +478,273 @@ require('posttovars.php');
 		    </td>	
 		</tr>
 	    </table>
-	    
+	    <table border=1>
+		<tr>
+		    <td>
+			<table >
+			    <tr>
+				<td>
+				    <bold>Actions, We need to:</bold>
+				</td>
+			    </tr>
+			</table>
+			<table border=1>
+			    <tr>
+				<th>
+				    Send
+				</td>
+				<th>
+				    Follow up
+				</th> 
+			    </tr>
+			    <tr>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>Print Kit
+							    
+				</td>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>Print Kit Sent
+							    
+				</td>
+			    </tr>
+			    <tr>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>Gift
+							    
+				</td>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>Gift Sent
+							    
+				</td>
+			    </tr>
+			</table>
+	    	    </td>
+		    <td>
+			<table >
+			    <tr>
+				<td>
+				    <bold>2nd Actions, We need to:</bold>
+				</td>
+			    </tr>
+			</table>
+			<table border=1>
+			    <tr>
+				<th>
+				    Send
+				</td>
+				<th>
+				    Follow up
+				</th> 
+			    </tr>
+			    <tr>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>FHA Info
+							    
+				</td>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>FHA Info Sent
+							    
+				</td>
+			    </tr>
+			    <tr>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>FHA Info w/Paypal
+							    
+				</td>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>FHA Info w/Paypal Sent
+							    
+				</td>
+			    </tr>
+			</table>
+	    	    </td>
+		</tr>
+		<tr>
+		<td>
+			<table >
+			    <tr>
+				<td>
+				    <bold>3rd Actions, We need to:</bold>
+				</td>
+			    </tr>
+			</table>
+			<table border=1>
+			    <tr>
+				<th>
+				    Send
+				</td>
+				<th>
+				    Follow up
+				</th> 
+			    </tr>
+			    <tr>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>FHA Info
+							    
+				</td>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>FHA Info Sent
+							    
+				</td>
+			    </tr>
+			    <tr>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>FHA Info w/Paypal
+							    
+				</td>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>FHA Info w/Paypal Sent
+							    
+				</td>
+			    </tr>
+			</table>
+	    	    </td>
+		    <td>
+			<table >
+			    <tr>
+				<td>
+				    <bold>4th Actions, We need to:</bold>
+				</td>
+			    </tr>
+			</table>
+			<table border=1>
+			    <tr>
+				<th>
+				    Send
+				</td>
+				<th>
+				    Follow up
+				</th> 
+			    </tr>
+			    <tr>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>FHA Info
+							    
+				</td>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>FHA Info Sent
+							    
+				</td>
+			    </tr>
+			    <tr>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>FHA Info w/Paypal
+							    
+				</td>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>FHA Info w/Paypal Sent
+							    
+				</td>
+			    </tr>
+			</table>
+	    	    </td>
+		</tr>
+		<tr>
+		<td>
+			<table >
+			    <tr>
+				<td>
+				    <bold>5th Actions, We need to:</bold>
+				</td>
+			    </tr>
+			</table>
+			<table border=1>
+			    <tr>
+				<th>
+				    Send
+				</td>
+				<th>
+				    Follow up
+				</th> 
+			    </tr>
+			    <tr>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>FHA Info
+							    
+				</td>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>FHA Info Sent
+							    
+				</td>
+			    </tr>
+			    <tr>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>FHA Info w/Paypal
+							    
+				</td>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>FHA Info w/Paypal Sent
+							    
+				</td>
+			    </tr>
+			</table>
+	    	    </td>
+		    <td>
+			<table >
+			    <tr>
+				<td>
+				    <bold>6th Actions, We need to:</bold>
+				</td>
+			    </tr>
+			</table>
+			<table border=1>
+			    <tr>
+				<th>
+				    Send
+				</td>
+				<th>
+				    Follow up
+				</th> 
+			    </tr>
+			    <tr>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>FHA Info
+							    
+				</td>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>FHA Info Sent
+							    
+				</td>
+			    </tr>
+			    <tr>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>FHA Info w/Paypal
+							    
+				</td>
+				<td>
+				    Y:<input type="radio" name="_test_207" value="y"/>
+				    N:<input type="radio" name="_test_207" value="n"/>FHA Info w/Paypal Sent
+							    
+				</td>
+			    </tr>
+			</table>
+	    	    </td>
+		</tr>
+
+	    </table>
 	    <table>
 		<tr>
 		    <td>
@@ -650,7 +916,7 @@ require('posttovars.php');
     <tr>
 	<td>
 	   <?PHP
-		echo '<iframe seamless=seamless src="./blandfileupload.php?id='.$ID.'" height="800" width="1500" ></iframe>';
+		echo '<iframe seamless=seamless src="./blandfileupload.php?id='.$ID.'" height="800" width="1300" ></iframe>';
 	    ?>
 	</td>
     </tr>
