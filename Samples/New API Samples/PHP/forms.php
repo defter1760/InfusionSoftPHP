@@ -108,13 +108,13 @@ require('posttovars.php');
 				{
 				    echo 'value="'.$StreetAddress1.'"';
 				}
-				else
-				{
-				    if(isset($_POST['StreetAddress1']))
-				    {
-					echo 'value="'.$_POST['StreetAddress1'].'"';
-				    }
-				}
+				//else
+				//{
+				//    if(isset($_POST['StreetAddress1']))
+				//    {
+				//	echo 'value="'.$_POST['StreetAddress1'].'"';
+				//    }
+				//}
 			    ?>	   	   	    
 			/>
 		    </td>
