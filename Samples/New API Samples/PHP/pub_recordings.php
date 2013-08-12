@@ -32,9 +32,9 @@ if(isset($_GET['id']))
 //echo $single_id;
 //echo $single_fName;
                 #echo '<h1>Recordings for '.$single_fName.' '.$single_lName.'</h1>';
-                echo '<table width=400px>';
+                echo '<table CELLSPACING=10 width=400px>';
                     echo '<tr>';
-                        echo '<th width=200px>';
+                        echo '<th width=200px align=center>';
                             echo'Date uploaded';
                         echo '</th>';
                         echo '<th width=200px>';
@@ -55,7 +55,7 @@ if(isset($_GET['id']))
                         $RecOutDesc = $RecOut['date'];
                     }
                         echo '<tr>';
-                            echo '<td>';
+                            echo '<td align=center>';
                                 echo $RecOut['date'];
                             echo '</td>';
                             echo '<td>';
