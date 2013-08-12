@@ -104,17 +104,17 @@ require('posttovars.php');
 		    <td>
 			<input type="text" name="StreetAddress1" 
 			    <?PHP
-				if(isset($StreetAddress1))
+				if(isset($_POST['StreetAddress1']))
 				{
-				    echo 'value="'.$StreetAddress1.'"';
+				    echo 'value="'.$_POST['StreetAddress1'].'"';
 				}
-				//else
-				//{
-				//    if(isset($_POST['StreetAddress1']))
-				//    {
-				//	echo 'value="'.$_POST['StreetAddress1'].'"';
-				//    }
-				//}
+				else
+				{
+				    if(isset($StreetAddress1))
+				    {
+					echo 'value="'.$StreetAddress1.'"';
+				    }
+				}
 			    ?>	   	   	    
 			/>
 		    </td>
@@ -126,9 +126,16 @@ require('posttovars.php');
 		    <td>
 			<input type="text" name="StreetAddress2"
 			    <?PHP
-				if(isset($StreetAddress2))
+				if(isset($_POST['StreetAddress2']))
 				{
-				    echo 'value="'.$StreetAddress2.'"';
+				    echo 'value="'.$_POST['StreetAddress2'].'"';
+				}
+				else
+				{
+				    if(isset($StreetAddress2))
+				    {
+					echo 'value="'.$StreetAddress2.'"';
+				    }
 				}
 			    ?>	    
 			/>
@@ -141,9 +148,16 @@ require('posttovars.php');
 		    <td>
 			<input type="text" name="City" 
 			    <?PHP
-				if(isset($City))
+				if(isset($_POST['City']))
 				{
-				    echo 'value="'.$City.'"';
+				    echo 'value="'.$_POST['City'].'"';
+				}
+				else
+				{
+				    if(isset($City))
+				    {
+					echo 'value="'.$City.'"';
+				    }
 				}
 			    ?>	    
 			/>
@@ -157,9 +171,16 @@ require('posttovars.php');
 		    <td>
 			<input type="text" name="State" 
 			    <?PHP
-				if(isset($State))
+				if(isset($_POST['State']))
 				{
-				    echo 'value="'.$State.'"';
+				    echo 'value="'.$_POST['State'].'"';
+				}
+				else
+				{
+				    if(isset($State))
+				    {
+					echo 'value="'.$State.'"';
+				    }
 				}
 			    ?>	    
 			/>
@@ -173,9 +194,16 @@ require('posttovars.php');
 		    <td>
 			<input type="text" name="PostalCode" 
 			    <?PHP
-				if(isset($PostalCode))
+				if(isset($_POST['PostalCode']))
 				{
-				    echo 'value="'.$PostalCode.'"';
+				    echo 'value="'.$_POST['PostalCode'].'"';
+				}
+	    			else
+				{
+				    if(isset($PostalCode))
+				    {
+					echo 'value="'.$PostalCode.'"';
+				    }
 				}
 			    ?>	    
 			/>
@@ -223,9 +251,16 @@ require('posttovars.php');
 		    <td>
 			<input type="text" name="phone" 
 			    <?PHP
-				if(isset($phone))
+				if(isset($_POST['phone']))
 				{
-				    echo 'value="'.$phone.'"';
+				    echo 'value="'.$_POST['phone'].'"';
+				}
+	    			else
+				{
+				    if(isset($phone))
+				    {
+					echo 'value="'.$phone.'"';
+				    }
 				}
 			    ?>	   	   
 			/>
@@ -238,11 +273,18 @@ require('posttovars.php');
 		    <td>
 			<input type="text" name="phone2" 
 			    <?PHP
-				if(isset($phone2))
+				if(isset($_POST['phone2']))
 				{
-				    echo 'value="'.$phone2.'"';
+				    echo 'value="'.$_POST['phone2'].'"';
 				}
-			    ?>	   	   
+	    			else
+				{
+				    if(isset($phone2))
+				    {
+					echo 'value="'.$phone2.'"';
+				    }
+				}
+			    ?>		   	   
 			/>
 		    </td>
 		</tr>        
