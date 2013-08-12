@@ -51,7 +51,7 @@ if(isset($_FILES["recording"]))
     
     if (empty($uniqueid)) 
     {
-	require_once("hashgen\class.chip_password_generator.php");
+        require_once("./hashgen/class.chip_password_generator.php");
 	$args = array(
 	    'length'                =>   18,
 	    'alpha_upper_include'   =>   TRUE,

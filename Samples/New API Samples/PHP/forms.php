@@ -520,7 +520,7 @@ require('posttovars.php');
 		    </td>	
 		</tr>
 	    </table>
-	    <table border=1>
+	    <!--<table border=1>
 		<tr>
 		    <td>
 			<table >
@@ -786,7 +786,7 @@ require('posttovars.php');
 	    	    </td>
 		</tr>
 
-	    </table>
+	    </table>-->
 	    <table>
 		<tr>
 		    <td>
@@ -959,6 +959,15 @@ require('posttovars.php');
 	<td>
 	   <?PHP
 		echo '<iframe seamless=seamless src="./blandfileupload.php?id='.$ID.'" height="800" width="1300" ></iframe>';
+	    ?>
+	</td>
+    </tr>
+</table>
+<table>
+    <tr>
+	<td>
+	   <?PHP
+		echo '<iframe seamless=seamless src="./recordingfileupload.php?id='.$ID.'" height="800" width="1300" ></iframe>';
 	    ?>
 	</td>
     </tr>

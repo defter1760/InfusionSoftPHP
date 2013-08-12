@@ -39,6 +39,7 @@ if (isset($_POST))
    
    
    $count=0;
+   #print_r($contacts);
     if(is_array($contacts))
     {
         foreach ($contacts as $val0)
