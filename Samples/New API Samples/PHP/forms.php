@@ -19,9 +19,7 @@ require('posttovars.php');
 	    </h1>
 	    <table>
 		<tr>
-		    <td><a href=forms.php>If this is a new client, fill out this form.</a>
-<br>
-				     <br>Or if this is an existing client, click <a href=lookup.php>Here.</a> <br>Not sure? Click <a href=lookup.php>Here.</a> 
+		    <td><a href=forms.php>New Client</a> <a href=lookup.php>Search</a> 
 
 		<?PHP
 		#print_r($_POST);
@@ -523,7 +521,7 @@ require('posttovars.php');
 	    </table>
 	    <table border=1>
 		<tr>
-		    <!--<td>
+		    <td>
 			<table >
 			    <tr>
 				<td>
@@ -572,7 +570,7 @@ require('posttovars.php');
 				</td>
 			    </tr>
 			</table>
-	    	    </td>-->
+	    	    </td>
 		    <!--<td>
 			<table >
 			    <tr>

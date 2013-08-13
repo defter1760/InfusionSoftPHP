@@ -32,14 +32,17 @@ if(isset($_GET['id']))
 //echo $single_id;
 //echo $single_fName;
                 #echo '<h1>Recordings for '.$single_fName.' '.$single_lName.'</h1>';
-                echo '<table CELLSPACING=10 width=400px>';
+                echo '<table CELLSPACING=10 width=490px border=0>';
                     echo '<tr>';
-                        echo '<th width=200px align=center>';
-                            echo'Date uploaded';
+                        echo '<th width=110px align=center>';
+                            echo'Date Uploaded';
                         echo '</th>';
                         echo '<th width=200px>';
-                            echo 'Recording - Click to play';
+                            echo 'Recording Click to download';
                         echo '</th>';
+                        //echo '<th width=200px align=center>';
+                        //echo '';
+                        //echo '</th>';
                     echo '</tr>';
                     
                     $queryRec = 'SELECT * FROM recordinglog where contactid="'.$gID.'" order by idrecordinglog desc';
@@ -63,6 +66,28 @@ if(isset($_GET['id']))
                                 echo $RecOutDesc;
                                 echo '</a>';
                             echo '</td>';
+                            //echo '<td>';
+                            //echo '';
+                            //echo '</td>';
+                        echo '</tr>';
+                        echo '<tr>';
+                            echo '<td>';
+                                echo '';
+                            echo '</td>';
+                            echo '<td>';
+                            echo '<audio controls>';
+                                echo '<source src="';
+                                echo 'recordings/'.$RecOut['path'];
+                                echo '" type="audio/mpeg">';
+                                echo 'Your browser does not support the audio element.';
+                            echo '</audio>';
+                                echo '';
+                            echo '</td>';
+                            //echo '<td>';
+                            //echo '<a href="recordings/'.$RecOut['path'].'" target="parent">';
+                            //echo 'Download';
+                            //echo '</a>';
+                            //echo '</td>';
                         echo '</tr>';
 
                     }
@@ -75,28 +100,28 @@ if(isset($_GET['id']))
                 }
                 else
                 {
-                    echo 'Please use the correct link from your email.';
+                    #echo 'Please use the correct link from your email.';
                 }
            }
            else
            {
-                echo 'Please use the correct link from your email.';
+                #echo 'Please use the correct link from your email.';
            }
         }
         else
         {
-            echo 'Please use the correct link from your email.';
+            #echo 'Please use the correct link from your email.';
         }
         
     }
     else
     {
-        echo 'Please use the correct link from your email.';
+        #echo 'Please use the correct link from your email.';
     }
 }
 else
 {
-    echo 'Please use the correct link from your email.';
+    #echo 'Please use the correct link from your email.';
 }
 
             ?>
