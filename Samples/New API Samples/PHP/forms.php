@@ -520,7 +520,7 @@ require('posttovars.php');
 		    </td>	
 		</tr>
 	    </table>
-	    <!--<table border=1>
+	    <table border=1>
 		<tr>
 		    <td>
 			<table >
@@ -534,15 +534,25 @@ require('posttovars.php');
 			    <tr>
 				<th>
 				    Send
-				</td>
+				</th>
 				<th>
 				    Follow up
 				</th> 
 			    </tr>
 			    <tr>
 				<td>
-				    Y:<input type="radio" name="_test_207" value="y"/>
-				    N:<input type="radio" name="_test_207" value="n"/>Print Kit
+				    <?PHP print($_POST['_Set_207']); ?>Y:<input type="radio"
+				    <?PHP
+				    $Group207 = 'Y';
+				    if(isset($Group207))
+				    {
+					
+					echo 'name="207" value="y" disabled=disabled checked=checked/>';
+					echo 'N:<input type="radio" name="207" value="n" disabled=disabled/>Print Kit';
+				    }
+				    
+				    ?>
+				    
 							    
 				</td>
 				<td>
@@ -565,7 +575,7 @@ require('posttovars.php');
 			    </tr>
 			</table>
 	    	    </td>
-		    <td>
+		    <!--<td>
 			<table >
 			    <tr>
 				<td>
@@ -577,7 +587,7 @@ require('posttovars.php');
 			    <tr>
 				<th>
 				    Send
-				</td>
+				</th>
 				<th>
 				    Follow up
 				</th> 
@@ -607,9 +617,9 @@ require('posttovars.php');
 				</td>
 			    </tr>
 			</table>
-	    	    </td>
+	    	    </td>-->
 		</tr>
-		<tr>
+		<!--<tr>
 		<td>
 			<table >
 			    <tr>
@@ -696,9 +706,9 @@ require('posttovars.php');
 			    </tr>
 			</table>
 	    	    </td>
-		</tr>
-		<tr>
-		<td>
+		</tr>-->
+		<!--<tr>
+		    <td>
 			<table >
 			    <tr>
 				<td>
@@ -784,9 +794,9 @@ require('posttovars.php');
 			    </tr>
 			</table>
 	    	    </td>
-		</tr>
+		</tr>-->
 
-	    </table>-->
+	    </table>
 	    <table>
 		<tr>
 		    <td>
