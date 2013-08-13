@@ -135,27 +135,33 @@ require('blandfileuploadhead.php');
     </tr>
     
             <?PHP
-            if(is_dir("upload/".$id))
+            if(isset($id))
             {
-                $files1 = scandir("upload/".$id);
-                foreach($files1 as $valfile)
+                if(!empty($id))
                 {
-                    if($valfile != '.')
+                    if(is_dir("upload/".$id))
                     {
-                        if($valfile != '..')
+                        $files1 = scandir("upload/".$id);
+                        foreach($files1 as $valfile)
                         {
-                            echo '<tr>';
-                                echo '<td>';
-                                    echo '<a href="upload/'.$id.'/'.$valfile.'" target="parent">'.$valfile.'</a>';
-                                echo '</td>';
-                            echo '</tr>';
+                            if($valfile != '.')
+                            {
+                                if($valfile != '..')
+                                {
+                                    echo '<tr>';
+                                        echo '<td>';
+                                            echo '<a href="upload/'.$id.'/'.$valfile.'" target="parent">'.$valfile.'</a>';
+                                        echo '</td>';
+                                    echo '</tr>';
+                                }
+                            }
                         }
                     }
+                    else
+                    {
+                        mkdir("upload/".$id);
+                    }
                 }
-            }
-            else
-            {
-                mkdir("upload/".$id);
             }
             ?>
         </td>

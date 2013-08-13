@@ -19,8 +19,9 @@ require('posttovars.php');
 	    </h1>
 	    <table>
 		<tr>
-		    <td>
-				    If this is a new client, fill out this form. <br>Or if this is an existing client, click <a href=lookup.php>Here.</a> <br>Not sure? Click <a href=lookup.php>Here.</a> 
+		    <td><a href=forms.php>If this is a new client, fill out this form.</a>
+<br>
+				     <br>Or if this is an existing client, click <a href=lookup.php>Here.</a> <br>Not sure? Click <a href=lookup.php>Here.</a> 
 
 		<?PHP
 		#print_r($_POST);
@@ -522,7 +523,7 @@ require('posttovars.php');
 	    </table>
 	    <table border=1>
 		<tr>
-		    <td>
+		    <!--<td>
 			<table >
 			    <tr>
 				<td>
@@ -541,19 +542,16 @@ require('posttovars.php');
 			    </tr>
 			    <tr>
 				<td>
-				    <?PHP print($_POST['_Set_207']); ?>Y:<input type="radio"
 				    <?PHP
-				    $Group207 = 'Y';
-				    if(isset($Group207))
-				    {
-					
-					echo 'name="207" value="y" disabled=disabled checked=checked/>';
-					echo 'N:<input type="radio" name="207" value="n" disabled=disabled/>Print Kit';
-				    }
-				    
+					echo 'Y:<input type="radio"';
+					$Group207 = 'Y';
+					if(isset($Group207))
+					{
+					    
+					    echo 'name="207" value="y" disabled=disabled checked=checked/>';
+					    echo 'N:<input type="radio" name="207" value="n" disabled=disabled/>Print Kit';
+					}
 				    ?>
-				    
-							    
 				</td>
 				<td>
 				    Y:<input type="radio" name="_test_207" value="y"/>
@@ -574,7 +572,7 @@ require('posttovars.php');
 				</td>
 			    </tr>
 			</table>
-	    	    </td>
+	    	    </td>-->
 		    <!--<td>
 			<table >
 			    <tr>
