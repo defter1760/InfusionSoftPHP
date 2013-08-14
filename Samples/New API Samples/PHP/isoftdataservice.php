@@ -95,13 +95,90 @@ if(isset($Groups))
 {
     $Group = explode(",",$Groups);
     #print_r($Group);
+    #print_r();
     foreach($GroupSeries as $groupkey => $groupval)
     {
         $match= array_search_key($groupkey,$Group);
         if($GroupSeries[$match] != 'Group0')
         {
+            #echo $GroupSeries[$match];
             $$GroupSeries[$match] = 'y';
+            #echo $$GroupSeries[$match];
+            
         }
+        
     }
 }
+?>
+<?PHP
+if (isset($Group227))
+{
+    if($Group227 == 'y')
+    {
+	$BinderGroupSet = 'y';
+    }
+}
+if (isset($Group229))
+{
+    if($Group229 == 'y')
+    {
+	$BinderGroupSet = 'y';
+    }
+}
+if (isset($Group231))
+{
+    if($Group231 == 'y')
+    {
+	$BinderGroupSet = 'y';
+    }
+}
+if (isset($Group233))
+{
+    if($Group233 == 'y')
+    {
+	$BinderGroupSet = 'y';
+    }
+}
+if (isset($Group235))
+{
+    if($Group235 == 'y')
+    {
+	$BinderGroupSet = 'y';
+    }
+}
+if (isset($Group237))
+{
+    if($Group237 == 'y')
+    {
+	$BinderGroupSet = 'y';
+    }
+}
+if (isset($Group239))
+{
+    if($Group239 == 'y')
+    {
+	$BinderGroupSet = 'y';
+    }
+}
+if (isset($Group241))
+{
+    if($Group241 == 'y')
+    {
+	$BinderGroupSet = 'y';
+    }
+}
+if (isset($Group243))
+{
+    if($Group243 == 'y')
+    {
+	$BinderGroupSet = 'y';
+    }
+}
+if (isset($Group245))
+{
+    if($Group245 == 'y')
+    {
+	$BinderGroupSet = 'y';
+    }
+}		
 ?>

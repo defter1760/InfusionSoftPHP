@@ -6,7 +6,9 @@ require('posttovars.php');
     //echo "<pre>";
     //print_r($_POST);
     //echo "</pre>";
+    
 ?>
+
 <body>
 
 
@@ -19,7 +21,7 @@ require('posttovars.php');
 	    </h1>
 	    <table>
 		<tr>
-		    <td><a href=forms.php>New Client</a> <a href=lookup.php>Search</a> 
+		    <td><a href=forms.php>New Client</a> <a href=lookup.php>Search</a><br> 
 
 		<?PHP
 		#print_r($_POST);
@@ -27,6 +29,7 @@ require('posttovars.php');
 		    require('ContactService-Sample.php');
 		    require('mySQLquery.php');
 		?>
+		
 		    </td>
 		</tr>
 		<tr>
@@ -519,7 +522,7 @@ require('posttovars.php');
 		    </td>	
 		</tr>
 	    </table>
-	    <table border=1>
+	    <table >
 		<tr>
 		    <td>
 			<table >
@@ -541,37 +544,90 @@ require('posttovars.php');
 			    <tr>
 				<td>
 				    <?PHP
-					echo 'Y:<input type="radio"';
-					$Group207 = 'Y';
+					echo 'Print Kit<br>Y:<input type="radio"';
 					if(isset($Group207))
 					{
-					    
 					    echo 'name="207" value="y" disabled=disabled checked=checked/>';
-					    echo 'N:<input type="radio" name="207" value="n" disabled=disabled/>Print Kit';
+					    echo 'N:<input type="radio" name="207" value="n" disabled=disabled/>';
+					}
+					else
+					{
+					    if (isset($Group187))
+					    {
+						echo 'name="207" value="y" disabled=disabled checked=checked/>';
+						echo 'N:<input type="radio" name="207" value="n" disabled=disabled/>'; 
+					    }
+					    else
+					    {
+						echo 'name="207" value="y"/>';
+						echo 'N:<input type="radio" name="207" value="n"/>'; 
+
+					    }
 					}
 				    ?>
 				</td>
 				<td>
-				    Y:<input type="radio" name="_test_207" value="y"/>
-				    N:<input type="radio" name="_test_207" value="n"/>Print Kit Sent
-							    
+				    <?PHP
+					echo 'Print Kit Sent<br>Y:<input type="radio"';
+					
+					if(isset($Group187))
+					{
+					    echo 'name="187" value="y" disabled=disabled checked=checked/>';
+					    echo 'N:<input type="radio" name="187" value="n" disabled=disabled/>';
+					}
+					else
+					{
+					    echo 'name="187" value="y"/>';
+					    echo 'N:<input type="radio" name="187" value="n"/>'; 
+					}
+				    ?>	    
 				</td>
 			    </tr>
 			    <tr>
 				<td>
-				    Y:<input type="radio" name="_test_207" value="y"/>
-				    N:<input type="radio" name="_test_207" value="n"/>Gift
-							    
+				    <?PHP
+					echo 'Gift<br>Y:<input type="radio"';
+					if(isset($Group209))
+					{
+					    echo 'name="209" value="y" disabled=disabled checked=checked/>';
+					    echo 'N:<input type="radio" name="209" value="n" disabled=disabled/>';
+					}
+					else
+					{
+					    if (isset($Group211))
+					    {
+						echo 'name="209" value="y" disabled=disabled checked=checked/>';
+						echo 'N:<input type="radio" name="209" value="n" disabled=disabled/>'; 
+					    }
+					    else
+					    {
+						echo 'name="209" value="y"/>';
+						echo 'N:<input type="radio" name="209" value="n"/>'; 
+
+					    }
+					}
+				    ?>		    
 				</td>
 				<td>
-				    Y:<input type="radio" name="_test_207" value="y"/>
-				    N:<input type="radio" name="_test_207" value="n"/>Gift Sent
-							    
+				    <?PHP
+					echo 'Gift Sent<br>Y:<input type="radio"';
+					
+					if(isset($Group211))
+					{
+					    echo 'name="211" value="y" disabled=disabled checked=checked/>';
+					    echo 'N:<input type="radio" name="211" value="n" disabled=disabled/>';
+					}
+					else
+					{
+					    echo 'name="211" value="y"/>';
+					    echo 'N:<input type="radio" name="211" value="n"/>'; 
+					}
+				    ?>		    
 				</td>
 			    </tr>
 			</table>
 	    	    </td>
-		    <!--<td>
+		    <td>
 			<table >
 			    <tr>
 				<td>
@@ -590,30 +646,90 @@ require('posttovars.php');
 			    </tr>
 			    <tr>
 				<td>
-				    Y:<input type="radio" name="_test_207" value="y"/>
-				    N:<input type="radio" name="_test_207" value="n"/>FHA Info
-							    
+				    <?PHP
+					echo 'FHA Info<br>Y:<input type="radio"';
+					if(isset($Group215))
+					{
+					    echo 'name="215" value="y" disabled=disabled checked=checked/>';
+					    echo 'N:<input type="radio" name="215" value="n" disabled=disabled/>';
+					}
+					else
+					{
+					    if (isset($Group165))
+					    {
+						echo 'name="215" value="y" disabled=disabled checked=checked/>';
+						echo 'N:<input type="radio" name="215" value="n" disabled=disabled/>'; 
+					    }
+					    else
+					    {
+						echo 'name="215" value="y"/>';
+						echo 'N:<input type="radio" name="165" value="n"/>'; 
+
+					    }
+					}
+				    ?>		    
 				</td>
 				<td>
-				    Y:<input type="radio" name="_test_207" value="y"/>
-				    N:<input type="radio" name="_test_207" value="n"/>FHA Info Sent
-							    
+				    <?PHP
+					echo 'FHA Info Sent<br>Y:<input type="radio"';
+					
+					if(isset($Group165))
+					{
+					    echo 'name="165" value="y" disabled=disabled checked=checked/>';
+					    echo 'N:<input type="radio" name="165" value="n" disabled=disabled/>';
+					}
+					else
+					{
+					    echo 'name="165" value="y"/>';
+					    echo 'N:<input type="radio" name="165" value="n"/>'; 
+					}
+				    ?>			    
 				</td>
 			    </tr>
 			    <tr>
 				<td>
-				    Y:<input type="radio" name="_test_207" value="y"/>
-				    N:<input type="radio" name="_test_207" value="n"/>FHA Info w/Paypal
-							    
+				    <?PHP
+					echo 'FHA Info w/ PayPal<br>Y:<input type="radio"';
+					if(isset($Group217))
+					{
+					    echo 'name="217" value="y" disabled=disabled checked=checked/>';
+					    echo 'N:<input type="radio" name="217" value="n" disabled=disabled/>';
+					}
+					else
+					{
+					    if (isset($Group161))
+					    {
+						echo 'name="217" value="y" disabled=disabled checked=checked/>';
+						echo 'N:<input type="radio" name="217" value="n" disabled=disabled/>'; 
+					    }
+					    else
+					    {
+						echo 'name="217" value="y"/>';
+						echo 'N:<input type="radio" name="165" value="n"/>'; 
+
+					    }
+					}
+				    ?>		    
 				</td>
 				<td>
-				    Y:<input type="radio" name="_test_207" value="y"/>
-				    N:<input type="radio" name="_test_207" value="n"/>FHA Info w/Paypal Sent
-							    
+				    <?PHP
+					echo 'FHA Info w/ PayPal Sent<br>Y:<input type="radio"';
+					
+					if(isset($Group161))
+					{
+					    echo 'name="161" value="y" disabled=disabled checked=checked/>';
+					    echo 'N:<input type="radio" name="161" value="n" disabled=disabled/>';
+					}
+					else
+					{
+					    echo 'name="161" value="y"/>';
+					    echo 'N:<input type="radio" name="161" value="n"/>'; 
+					}
+				    ?>		    
 				</td>
 			    </tr>
 			</table>
-	    	    </td>-->
+	    	    </td>
 		</tr>
 		<!--<tr>
 		<td>
@@ -916,38 +1032,239 @@ require('posttovars.php');
 		</tr>
 		<tr>
 		    <td>
-			<input type="checkbox" name="227" /> Binder 10
+			<!--<input type="checkbox" name="227" /> Binder 10-->
+			<?PHP
+			echo 'Binder 10<br>Y:<input type="radio"';
+			if(isset($BinderGroupSet))
+			{
+			    if(isset($Group227))
+			    {
+				echo 'name="227" value="y" disabled=disabled checked=checked/>';
+				echo 'N:<input type="radio" name="227" value="n" disabled=disabled/>';
+			    }
+			    else
+			    {
+				echo 'name="227" value="y" disabled=disabled/>';
+				echo 'N:<input type="radio" name="227" value="n" disabled=disabled/>';
+			    }
+			}
+			else
+			{
+				echo 'name="227" value="y"/>';
+				echo 'N:<input type="radio" name="227" value="n"/>';
+			}
+			?>
 		    </td>
 		    <td>
-			<input type="checkbox" name="229" /> Binder 09
+			<?PHP
+			echo 'Binder 09<br>Y:<input type="radio"';
+			if(isset($BinderGroupSet))
+			{
+			    if(isset($Group229))
+			    {
+				echo 'name="229" value="y" disabled=disabled checked=checked/>';
+				echo 'N:<input type="radio" name="229" value="n" disabled=disabled/>';
+			    }
+			    else
+			    {
+				echo 'name="229" value="y" disabled=disabled/>';
+				echo 'N:<input type="radio" name="229" value="n" disabled=disabled/>';
+			    }
+			}
+			else
+			{
+				echo 'name="229" value="y"/>';
+				echo 'N:<input type="radio" name="229" value="n"/>';
+			}
+			?>
 		    </td>
 		    <td>
-			<input type="checkbox" name="231" /> Binder 08
+			<?PHP
+			echo 'Binder 08<br>Y:<input type="radio"';
+			if(isset($BinderGroupSet))
+			{
+			    if(isset($Group229))
+			    {
+				echo 'name="231" value="y" disabled=disabled checked=checked/>';
+				echo 'N:<input type="radio" name="231" value="n" disabled=disabled/>';
+			    }
+			    else
+			    {
+				echo 'name="231" value="y" disabled=disabled/>';
+				echo 'N:<input type="radio" name="231" value="n" disabled=disabled/>';
+			    }
+			}
+			else
+			{
+				echo 'name="231" value="y"/>';
+				echo 'N:<input type="radio" name="231" value="n"/>';
+			}
+			?>
 		    </td>
 		    <td>
-			<input type="checkbox" name="233" /> Binder 07
+			<?PHP
+			echo 'Binder 07<br>Y:<input type="radio"';
+			if(isset($BinderGroupSet))
+			{
+			    if(isset($Group233))
+			    {
+				echo 'name="233" value="y" disabled=disabled checked=checked/>';
+				echo 'N:<input type="radio" name="233" value="n" disabled=disabled/>';
+			    }
+			    else
+			    {
+				echo 'name="233" value="y" disabled=disabled/>';
+				echo 'N:<input type="radio" name="233" value="n" disabled=disabled/>';
+			    }
+			}
+			else
+			{
+				echo 'name="233" value="y"/>';
+				echo 'N:<input type="radio" name="233" value="n"/>';
+			}
+			?>
 		    </td>
 		</tr>
 		<tr>
 		    <td>
-			<input type="checkbox" name="235" /> Binder 06
+			<?PHP
+			echo 'Binder 06<br>Y:<input type="radio"';
+			if(isset($BinderGroupSet))
+			{
+			    if(isset($Group235))
+			    {
+				echo 'name="235" value="y" disabled=disabled checked=checked/>';
+				echo 'N:<input type="radio" name="235" value="n" disabled=disabled/>';
+			    }
+			    else
+			    {
+				echo 'name="235" value="y" disabled=disabled/>';
+				echo 'N:<input type="radio" name="235" value="n" disabled=disabled/>';
+			    }
+			}
+			else
+			{
+				echo 'name="235" value="y"/>';
+				echo 'N:<input type="radio" name="235" value="n"/>';
+			}
+			?>
 		    </td>
 		    <td>
-			<input type="checkbox" name="237" /> Binder 05
+			<?PHP
+			echo 'Binder 05<br>Y:<input type="radio"';
+			if(isset($BinderGroupSet))
+			{
+			    if(isset($Group237))
+			    {
+				echo 'name="237" value="y" disabled=disabled checked=checked/>';
+				echo 'N:<input type="radio" name="237" value="n" disabled=disabled/>';
+			    }
+			    else
+			    {
+				echo 'name="237" value="y" disabled=disabled/>';
+				echo 'N:<input type="radio" name="237" value="n" disabled=disabled/>';
+			    }
+			}
+			else
+			{
+				echo 'name="237" value="y"/>';
+				echo 'N:<input type="radio" name="237" value="n"/>';
+			}
+			?>
 		    </td>
 		    <td>
-			<input type="checkbox" name="239" /> Binder 04
+			<?PHP
+			echo 'Binder 04<br>Y:<input type="radio"';
+			if(isset($BinderGroupSet))
+			{
+			    if(isset($Group239))
+			    {
+				echo 'name="239" value="y" disabled=disabled checked=checked/>';
+				echo 'N:<input type="radio" name="239" value="n" disabled=disabled/>';
+			    }
+			    else
+			    {
+				echo 'name="239" value="y" disabled=disabled/>';
+				echo 'N:<input type="radio" name="239" value="n" disabled=disabled/>';
+			    }
+			}
+			else
+			{
+				echo 'name="239" value="y"/>';
+				echo 'N:<input type="radio" name="239" value="n"/>';
+			}
+			?>
 		    </td>
 		    <td>
-			<input type="checkbox" name="241" /> Binder 03
+			<?PHP
+			echo 'Binder 03<br>Y:<input type="radio"';
+			if(isset($BinderGroupSet))
+			{
+			    if(isset($Group241))
+			    {
+				echo 'name="241" value="y" disabled=disabled checked=checked/>';
+				echo 'N:<input type="radio" name="241" value="n" disabled=disabled/>';
+			    }
+			    else
+			    {
+				echo 'name="241" value="y" disabled=disabled/>';
+				echo 'N:<input type="radio" name="241" value="n" disabled=disabled/>';
+			    }
+			}
+			else
+			{
+				echo 'name="241" value="y"/>';
+				echo 'N:<input type="radio" name="241" value="n"/>';
+			}
+			?>
 		    </td>
 		</tr>
 		<tr>
 		    <td>
-			<input type="checkbox" name="243" /> Binder 02
+			<?PHP
+			echo 'Binder 02<br>Y:<input type="radio"';
+			if(isset($BinderGroupSet))
+			{
+			    if(isset($Group243))
+			    {
+				echo 'name="243" value="y" disabled=disabled checked=checked/>';
+				echo 'N:<input type="radio" name="243" value="n" disabled=disabled/>';
+			    }
+			    else
+			    {
+				echo 'name="243" value="y" disabled=disabled/>';
+				echo 'N:<input type="radio" name="243" value="n" disabled=disabled/>';
+			    }
+			}
+			else
+			{
+				echo 'name="243" value="y"/>';
+				echo 'N:<input type="radio" name="243" value="n"/>';
+			}
+			?>
 		    </td>
 		    <td>
-			<input type="checkbox" name="245" /> Binder 01
+			<?PHP
+			echo 'Binder 01<br>Y:<input type="radio"';
+			if(isset($BinderGroupSet))
+			{
+			    if(isset($Group245))
+			    {
+				echo 'name="245" value="y" disabled=disabled checked=checked/>';
+				echo 'N:<input type="radio" name="245" value="n" disabled=disabled/>';
+			    }
+			    else
+			    {
+				echo 'name="245" value="y" disabled=disabled/>';
+				echo 'N:<input type="radio" name="245" value="n" disabled=disabled/>';
+			    }
+			}
+			else
+			{
+				echo 'name="245" value="y"/>';
+				echo 'N:<input type="radio" name="245" value="n"/>';
+			}
+			?>
 		    </td>
 		</tr>
 		<tr>

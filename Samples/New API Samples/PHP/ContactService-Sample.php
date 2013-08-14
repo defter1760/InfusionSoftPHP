@@ -121,6 +121,6 @@ if(!isset($ID))
 else
 {
 	require('isoftdataupdate.php');
-	echo "We posted an ID, We won't be adding a new contact but we can update them!";
+	echo "We posted an ID:<br> We won't be adding a new contact,<br> but we can update them!";
 }
 ?>
