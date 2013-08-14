@@ -21,7 +21,7 @@ require('posttovars.php');
 	    </h1>
 	    <table>
 		<tr>
-		    <td><a href=forms.php>New Client</a> <a href=lookup.php>Search</a><br> 
+		    <td><a href=forms.php>New Client</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=lookup.php>Search</a><br> 
 
 		<?PHP
 		#print_r($_POST);
@@ -500,7 +500,19 @@ require('posttovars.php');
 				}
 			    ?></textarea>
 		    </td>
-		</tr>    
+		</tr>
+		<tr>
+		    <td>
+			Additional Info:
+		    </td>
+		    <td>
+			<textarea rows="0" cols="70" name="additionalInfo"><?PHP if(isset($additionalInfo))
+				{
+				    echo $additionalInfo;
+				}
+			    ?></textarea>
+		    </td>
+		</tr>		
 		    <tr>
 		    <td>
 			Recording Made?
@@ -1290,7 +1302,7 @@ require('posttovars.php');
     <tr>
 	<td>
 	   <?PHP
-		echo '<iframe seamless=seamless src="./recordingfileupload.php?id='.$ID.'" height="800" width="1300" ></iframe>';
+		echo '<iframe seamless=seamless src="./recordingfileupload.php?email='.$email.'&id='.$ID.'" height="800" width="1300" ></iframe>';
 	    ?>
 	</td>
     </tr>

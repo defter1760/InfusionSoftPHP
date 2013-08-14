@@ -173,12 +173,16 @@ if(isset($ID))
             $query = "UPDATE clients set ahaMoment='".$ahaMoment."' where id='".$ID."'";
             $result = mysql_query($query) or die('Query failed: ' . mysql_error());
         }             
-    
+        if(isset($additionalInfo))
+        {
+            $query = "UPDATE clients set additionalInfo='".$additionalInfo."' where id='".$ID."'";
+            $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+        }     
     
     }
     else
     {
-        $query = "insert into clients (id,fName,lName,email,phone,phone2,specialInfo,lifePurpose,lifeLesson,lifeSchoolWisdom,lifeSchoolLove,lifeSchoolService,lifeSchoolPeace,importantToClient,ahaMoment,recordingMade,skypeName) values('".$ID."','".$fName."','".$lName."','".$email."','".$phone."','".$phone2."','".$specialInfo."','".$lifePurpose."','".$lifeLesson."','".$lifeSchoolWisdom."','".$lifeSchoolLove."','".$lifeSchoolService."','".$lifeSchoolPeace."','".$importantToClient."','".$ahaMoment."','".$recordingMade."','".$skypeName."')";
+        $query = "insert into clients (id,fName,lName,email,phone,phone2,specialInfo,lifePurpose,lifeLesson,lifeSchoolWisdom,lifeSchoolLove,lifeSchoolService,lifeSchoolPeace,importantToClient,ahaMoment,recordingMade,skypeName,additionalInfo) values('".$ID."','".$fName."','".$lName."','".$email."','".$phone."','".$phone2."','".$specialInfo."','".$lifePurpose."','".$lifeLesson."','".$lifeSchoolWisdom."','".$lifeSchoolLove."','".$lifeSchoolService."','".$lifeSchoolPeace."','".$importantToClient."','".$ahaMoment."','".$recordingMade."','".$skypeName."','".$additionalInfo."')";
         $result = mysql_query($query) or die('Query failed: ' . mysql_error());    
 
     }
@@ -194,7 +198,9 @@ if(isset($ID))
         $lifeSchoolPeace = $line2['lifeSchoolPeace'];
         $lifeLesson = $line2['lifeLesson'];
         $importantToClient = $line2['importantToClient'];
-        $ahaMoment = $line2['ahaMoment'];        
+        $ahaMoment = $line2['ahaMoment'];
+        $additionalInfo = $line2['additionalInfo'];
+        #print_r($line2);
     }
 #    echo "<pre>";
 #    echo $City;
@@ -211,7 +217,7 @@ else
     if(isset($conID))
     {
 
-        $query = "insert into clients (id,fName,lName,email,phone,phone2,specialInfo,lifePurpose,lifeLesson,lifeSchoolWisdom,lifeSchoolLove,lifeSchoolService,lifeSchoolPeace,importantToClient,ahaMoment,recordingMade,skypeName) values('".$conID."','".$fName."','".$lName."','".$email."','".$phone."','".$phone2."','".$specialInfo."','".$lifePurpose."','".$lifeLesson."','".$lifeSchoolWisdom."','".$lifeSchoolLove."','".$lifeSchoolService."','".$lifeSchoolPeace."','".$importantToClient."','".$ahaMoment."','".$recordingMade."','".$skypeName."')";
+        $query = "insert into clients (id,fName,lName,email,phone,phone2,specialInfo,lifePurpose,lifeLesson,lifeSchoolWisdom,lifeSchoolLove,lifeSchoolService,lifeSchoolPeace,importantToClient,ahaMoment,recordingMade,skypeName,additionalInfo) values('".$conID."','".$fName."','".$lName."','".$email."','".$phone."','".$phone2."','".$specialInfo."','".$lifePurpose."','".$lifeLesson."','".$lifeSchoolWisdom."','".$lifeSchoolLove."','".$lifeSchoolService."','".$lifeSchoolPeace."','".$importantToClient."','".$ahaMoment."','".$recordingMade."','".$skypeName."','".$additionalInfo."')";
         $result = mysql_query($query) or die('Query failed: ' . mysql_error());
     }
     else

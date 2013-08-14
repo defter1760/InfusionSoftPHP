@@ -66,8 +66,9 @@ if (empty($ahaMoment)) unset($ahaMoment);
 if (isset($_POST['recordingMade'])) $recordingMade = $_POST['recordingMade'];
 if (empty($recordingMade)) unset($recordingMade);
 
-if (isset($_POST['$skypeName'])) $skypeName = $_POST['$skypeName'];
+if (isset($_POST['skypeName'])) $skypeName = $_POST['skypeName'];
 if (empty($skypeName)) unset($skypeName);
 
-
+if (isset($_POST['additionalInfo'])) $additionalInfo = $_POST['additionalInfo'];
+if (empty($additionalInfo)) unset($additionalInfo);
 ?>

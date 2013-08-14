@@ -8,6 +8,7 @@ if(isset($_GET['id']))
         $Pdescription = $_POST['recordingdescription'];
         if (empty($Pdescription)) $Pdescription= 'N';
     }
+    $email = $_GET['email'];
 }
 $filedate= date("m".'_'."d".'_'."y".'_'."G".'_'."i".'_'."s");
 
@@ -16,10 +17,7 @@ if(isset($_FILES["recording"]))
     $allowedExts = array("mp3", "wav");
     $temp = explode(".", $_FILES["recording"]["name"]);
     $extension = end($temp);
-    if ((($_FILES["recording"]["type"] == "audio/mp3")
-    || ($_FILES["recording"]["type"] == "audio/wav"))
-    && ($_FILES["recording"]["size"] < 20000000)
-    && in_array($extension, $allowedExts))
+    if(isset($temp))
     {
         if ($_FILES["recording"]["error"] > 0)
         {
