@@ -306,6 +306,22 @@ require('posttovars.php');
 		</tr>
 		<tr>
 		    <td>
+			Skype name:
+		    </td>
+		    <td>
+			<input type=text name="skypeName" 
+			<?PHP if(isset($skypeName))
+				{
+				    echo 'value="';
+				    echo $skypeName;
+				    echo '"';
+				}
+			    ?>>
+		    </td>
+		</tr>
+
+		<tr>
+		    <td>
 			Special Information about client:
 		    </td>
 		    <td>
@@ -1298,7 +1314,7 @@ require('posttovars.php');
 	   <?PHP
 		if(isset($ID))
 		{
-		    echo '<iframe seamless=seamless src="./recordingfileupload.php?email='.$email.'&id='.$ID.'" height="800" width="1300" ></iframe>';
+		    echo '<iframe seamless=seamless src="./recordingfileupload.php?email='.$email.'&id='.$ID.'" height="400" width="1300" ></iframe>';
 		}
 	    ?>
 	</td>

@@ -10,15 +10,16 @@ if(isset($_FILES["file"]))
     $allowedExts = array("gif", "jpeg", "jpg", "png");
     $temp = explode(".", $_FILES["file"]["name"]);
     $extension = end($temp);
-    if ((($_FILES["file"]["type"] == "image/gif")
-    || ($_FILES["file"]["type"] == "image/jpeg")
-    || ($_FILES["file"]["type"] == "image/jpg")
-    || ($_FILES["file"]["type"] == "image/pjpeg")
-    || ($_FILES["file"]["type"] == "image/x-png")
-    || ($_FILES["file"]["type"] == "image/png"))
-    && ($_FILES["file"]["size"] < 2000000)
-    && in_array($extension, $allowedExts))
-    {
+    //if ((($_FILES["file"]["type"] == "image/gif")
+    //|| ($_FILES["file"]["type"] == "image/jpeg")
+    //|| ($_FILES["file"]["type"] == "image/jpg")
+    //|| ($_FILES["file"]["type"] == "image/pjpeg")
+    //|| ($_FILES["file"]["type"] == "image/x-png")
+    //|| ($_FILES["file"]["type"] == "image/png"))
+    //&& ($_FILES["file"]["size"] < 2000000)
+    //&& in_array($extension, $allowedExts))
+        if(isset($temp))
+        {
         if ($_FILES["file"]["error"] > 0)
         {
             echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
@@ -56,14 +57,15 @@ if(isset($_FILES["file2"]))
     $allowedExts = array("gif", "jpeg", "jpg", "png");
     $temp = explode(".", $_FILES["file2"]["name"]);
     $extension = end($temp);
-    if ((($_FILES["file2"]["type"] == "image/gif")
-    || ($_FILES["file2"]["type"] == "image/jpeg")
-    || ($_FILES["file2"]["type"] == "image/jpg")
-    || ($_FILES["file2"]["type"] == "image/pjpeg")
-    || ($_FILES["file2"]["type"] == "image/x-png")
-    || ($_FILES["file2"]["type"] == "image/png"))
-    && ($_FILES["file2"]["size"] < 2000000)
-    && in_array($extension, $allowedExts))
+    //if ((($_FILES["file"]["type"] == "image/gif")
+    //|| ($_FILES["file"]["type"] == "image/jpeg")
+    //|| ($_FILES["file"]["type"] == "image/jpg")
+    //|| ($_FILES["file"]["type"] == "image/pjpeg")
+    //|| ($_FILES["file"]["type"] == "image/x-png")
+    //|| ($_FILES["file"]["type"] == "image/png"))
+    //&& ($_FILES["file"]["size"] < 2000000)
+    //&& in_array($extension, $allowedExts))
+    if(isset($temp))
     {
         if ($_FILES["file2"]["error"] > 0)
         {

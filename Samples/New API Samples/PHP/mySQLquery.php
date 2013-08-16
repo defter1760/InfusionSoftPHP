@@ -179,7 +179,12 @@ if(isset($ID))
         {
             $query = "UPDATE clients set additionalInfo='".$additionalInfo."' where id='".$ID."'";
             $result = mysql_query($query) or die('Query failed: ' . mysql_error());
-        }     
+        }
+        if(isset($skypeName))
+        {
+            $query = "UPDATE clients set skypeName='".$skypeName."' where id='".$ID."'";
+            $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+        }        
     
     }
     else
@@ -203,6 +208,7 @@ if(isset($ID))
         $importantToClient = $line2['importantToClient'];
         $ahaMoment = $line2['ahaMoment'];
         $additionalInfo = $line2['additionalInfo'];
+        $skypeName = $line2['skypeName'];
         #print_r($line2);
     }
 #    echo "<pre>";
