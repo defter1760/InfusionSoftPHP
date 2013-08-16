@@ -1,6 +1,6 @@
 <?PHP
 require('mySQLconnect.php');
-
+echo '<br><br>';
 
 if(isset($ID))
 {
@@ -24,13 +24,14 @@ if(isset($ID))
     {
         if(isset($fName))
         {
+            
             $query = "UPDATE clients set fName='".$fName."' where id='".$ID."'";
-            $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+            $result = mysql_query($query) or die('Query failed to update First Name: ' . mysql_error());
         }
         if(isset($lName))
         {
-            $query = "UPDATE clients set lName='".$lName."' where id='".$ID."'";
-            $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+            $query = "UPDATE clients set lName='".addslashes($lName)."' where id='".$ID."'";
+            $result = mysql_query($query) or die('Query failed  to update Last Name: ' . mysql_error());
         }
         if(isset($email))
         {
@@ -107,7 +108,8 @@ if(isset($ID))
 
             }
 
-        }         //}
+        }
+        #//}
 
         if(isset($lifeSchoolService))
         {
@@ -182,10 +184,11 @@ if(isset($ID))
     }
     else
     {
-        $query = "insert into clients (id,fName,lName,email,phone,phone2,specialInfo,lifePurpose,lifeLesson,lifeSchoolWisdom,lifeSchoolLove,lifeSchoolService,lifeSchoolPeace,importantToClient,ahaMoment,recordingMade,skypeName,additionalInfo) values('".$ID."','".$fName."','".$lName."','".$email."','".$phone."','".$phone2."','".$specialInfo."','".$lifePurpose."','".$lifeLesson."','".$lifeSchoolWisdom."','".$lifeSchoolLove."','".$lifeSchoolService."','".$lifeSchoolPeace."','".$importantToClient."','".$ahaMoment."','".$recordingMade."','".$skypeName."','".$additionalInfo."')";
-        $result = mysql_query($query) or die('Query failed: ' . mysql_error());    
+        $query = "insert into clients (id,fName,lName,email,phone,phone2,specialInfo,lifePurpose,lifeLesson,lifeSchoolWisdom,lifeSchoolLove,lifeSchoolService,lifeSchoolPeace,importantToClient,ahaMoment,recordingMade,skypeName,additionalInfo) values('".$ID."','".$fName."','".addslashes($lName)."','".$email."','".$phone."','".$phone2."','".$specialInfo."','".$lifePurpose."','".$lifeLesson."','".$lifeSchoolWisdom."','".$lifeSchoolLove."','".$lifeSchoolService."','".$lifeSchoolPeace."','".$importantToClient."','".$ahaMoment."','".$recordingMade."','".$skypeName."','".$additionalInfo."')";
+        $result = mysql_query($query) or die('Query failed to insert new client: ' . mysql_error());    
 
     }
+    
     $query2 = 'SELECT * FROM clients where ID='.$ID;
     $result2 = mysql_query($query2) or die('Query failed: ' . mysql_error());
     while ($line2 = mysql_fetch_array($result2, MYSQL_ASSOC))

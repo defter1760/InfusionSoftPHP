@@ -76,8 +76,15 @@ echo 'Recording Description:</td><td><input type="text" name="recordingdescripti
     <table width="400px">
         <tr border=2>
             <td width="600">
+            <br><br>
+                    <?PHP
+        echo '<input class=record width=600px type=text value="';
+        echo 'http://www.nadiatumas.com/recordings/?id='.$id.'&email='.$email;
+        echo '"><br>';
+            ?>
 Link to Recordings page: <a target="parent" href="<?PHP echo "http://www.nadiatumas.com/recordings/?id=".$id."&email=".$email; ?>">Here</a><br><br>
-        </td>
+
+            </td>
     </tr>
 </table>
 </body>

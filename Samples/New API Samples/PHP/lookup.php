@@ -75,7 +75,9 @@ require('isoftdataservice.php');
 		<?PHP
 		    if(isset($lName))
 		    {
-			echo 'value="'.$lName.'"';
+			echo 'value="';
+			echo stripslashes($lName);
+			echo '"';
 		    }
 		?>
 	    />

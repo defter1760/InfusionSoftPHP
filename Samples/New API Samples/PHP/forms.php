@@ -26,8 +26,11 @@ require('posttovars.php');
 		<?PHP
 		#print_r($_POST);
 		    require('isoftdataservice.php');
+		    #echo 'isoftdataservice done';
 		    require('ContactService-Sample.php');
+		    #echo 'ContactService done';
 		    require('mySQLquery.php');
+		    #echo 'mySQLquery done';
 		?>
 		
 		    </td>
@@ -1291,9 +1294,12 @@ require('posttovars.php');
 </form>
 <table>
     <tr>
-	<td>
+	<td>	   
 	   <?PHP
-		echo '<iframe seamless=seamless src="./blandfileupload.php?id='.$ID.'" height="800" width="1300" ></iframe>';
+		if(isset($ID))
+		{
+		    echo '<iframe seamless=seamless src="./recordingfileupload.php?email='.$email.'&id='.$ID.'" height="800" width="1300" ></iframe>';
+		}
 	    ?>
 	</td>
     </tr>
@@ -1302,7 +1308,10 @@ require('posttovars.php');
     <tr>
 	<td>
 	   <?PHP
-		echo '<iframe seamless=seamless src="./recordingfileupload.php?email='.$email.'&id='.$ID.'" height="800" width="1300" ></iframe>';
+	   	if(isset($ID))
+		{
+		    echo '<iframe seamless=seamless src="./blandfileupload.php?id='.$ID.'" height="800" width="1300" ></iframe>';
+		}
 	    ?>
 	</td>
     </tr>
